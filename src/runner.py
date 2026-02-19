@@ -36,7 +36,7 @@ XLSX_FILES = {
 # =========================
 # SCHEDULE (draw == EXACTO columna "sorteo")
 # =========================
-UPDATE_AFTER = 2
+UPDATE_AFTER = 3
 
 SCHEDULE = [
     # Anguilla (4)
@@ -76,15 +76,7 @@ LOOKAHEAD_MINUTES = 5 * 60
 UPCOMING_GRACE_SECONDS = 10 * 60  # si ejecutas tarde manual, aún procesa
 
 FORCE_NOTIFY = os.getenv("FORCE_NOTIFY", "0").strip() == "1"
-
-# =========================
-# ✅ NUEVO (SIN TOCAR LO DEMÁS):
-# - Recorta histórico cuando se “diluye” por demasiadas filas usadas
-# - Regla especial para el PRIMER target del día (ej Anguilla 10AM)
-# =========================
-MAX_SOURCE_ROWS = 3000          # cap duro de filas usadas en histórico
-RECENT_DAYS_CAP = 180           # si hay demasiadas filas, limitar a últimos N días
-FIRST_TARGET_RECENT_DAYS = 120  # primer sorteo del día usa recencia para variar picks
+MANUAL_RUN   = os.getenv("MANUAL_RUN", "0").strip() == "1"
 
 
 # -----------------------------
@@ -153,9 +145,9 @@ def fingerprint(topq, top12, pales):
 # -----------------------------
 def _fresh_state():
     return {
-        "last_updates": {},           # date|lottery|draw -> done
+        "last_updates": {},
         "last_event_key": "",
-        "sent_by_target_fp": {},      # target_key -> fingerprint
+        "sent_by_target_fp": {},
         "last_wait_key": "",
     }
 
@@ -191,13 +183,9 @@ def save_state(state):
 # Dynamic time: Nacional Noche domingo = 18:00
 # -----------------------------
 def item_time(item: dict) -> str:
-    """
-    Ajusta horarios por reglas especiales.
-    - Nacional Noche: domingo 18:00 (6PM), otros días usa el time definido.
-    """
     try:
         n = now_rd()
-        is_sun = (n.weekday() == 6)  # Monday=0 ... Sunday=6
+        is_sun = (n.weekday() == 6)
         if item["lottery"] == "La Nacional" and item["draw"] == "Loteria Nacional- Noche" and is_sun:
             return "18:00"
     except Exception:
@@ -212,7 +200,7 @@ def draw_datetime_today_from_item(item: dict) -> datetime:
 
 
 # -----------------------------
-# Scraper hooks (load by file path)
+# Scraper hooks
 # -----------------------------
 def fetch_result(lottery: str, draw: str, date: str):
     import importlib.util
@@ -315,7 +303,6 @@ def try_update_one(item, state) -> bool:
     p1, p2, p3 = fetch_result(item["lottery"], item["draw"], date_str)
     p1, p2, p3 = normalize_2d(p1), normalize_2d(p2), normalize_2d(p3)
 
-    # Anti-invención HOY: si devuelve exactamente lo mismo que AYER antes de tiempo, no insertamos.
     yday = (now_rd().date() - timedelta(days=1)).strftime("%Y-%m-%d")
     yres = _get_row_for_date(item["lottery"], item["draw"], yday)
     if yres is not None and (p1, p2, p3) == yres:
@@ -341,6 +328,7 @@ def try_update_one(item, state) -> bool:
 
 # -----------------------------
 # FORCE REFRESH + BACKFILL (HOY + AYER)
+# ✅ FIX: también reporta qué insertó HOY (para que manual genere picks)
 # -----------------------------
 def _missing_for_date(date_str: str) -> list[dict]:
     missing = []
@@ -389,12 +377,19 @@ def _try_update_for_date(item, date_str: str, state: dict) -> bool:
     state["last_updates"] = last_updates
     return True
 
-def force_refresh_backfill(state: dict, days_back: int = 1, max_attempts: int = 5, backoff_seconds=None) -> dict:
+def force_refresh_backfill(state: dict, days_back: int = 1, max_attempts: int = 5, backoff_seconds=None):
+    """
+    Returns: (state, updated_today_items)
+    updated_today_items = list of schedule items (lottery/draw/time/...) that were inserted today by backfill
+    """
     if backoff_seconds is None:
         backoff_seconds = [2, 5, 10, 20, 30]
 
     base = now_rd().date()
     dates = [(base - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(0, days_back + 1)]
+
+    updated_today_items = []
+    updated_today_keys = set()
 
     for attempt in range(max_attempts):
         any_fixed = False
@@ -411,6 +406,14 @@ def force_refresh_backfill(state: dict, days_back: int = 1, max_attempts: int = 
                     if did:
                         any_fixed = True
                         print(f"[OK] Backfilled: {ds} | {item['lottery']} {item['draw']}")
+
+                        # ✅ si esto fue HOY, lo reportamos
+                        if ds == today_str():
+                            k = f"{ds}|{item['lottery']}|{item['draw']}"
+                            if k not in updated_today_keys:
+                                updated_today_keys.add(k)
+                                updated_today_items.append(item)
+
                 except Exception as e:
                     print(f"[WARN] Backfill skip/fail: {ds} | {item['lottery']} {item['draw']}: {e}")
 
@@ -419,7 +422,7 @@ def force_refresh_backfill(state: dict, days_back: int = 1, max_attempts: int = 
             print(f"[INFO] FORCE_REFRESH waiting {wait}s before retry...")
             time.sleep(wait)
 
-    return state
+    return state, updated_today_items
 
 
 # -----------------------------
@@ -483,7 +486,7 @@ def next_targets_same_time():
 
 
 # -----------------------------
-# Picks logging + grading (performance incluye ganadores + best_signal)
+# Picks logging + grading (sin cambios)
 # -----------------------------
 def log_pick(payload: dict):
     _ensure_dir(DATA_DIR)
@@ -662,7 +665,7 @@ def build_exploded_history():
 
 
 # -----------------------------
-# NEW: obtener números observados HOY en sorteos previos (cross-match real)
+# Observed nums (cross-match secuencial)
 # -----------------------------
 def observed_nums_today_before(target_dt: datetime) -> set[str]:
     date_str = today_str()
@@ -682,13 +685,12 @@ def observed_nums_today_before(target_dt: datetime) -> set[str]:
 
 
 # -----------------------------
-# Analysis per target (MI/Chi² histórico pero CONDICIONADO por secuencia de HOY)
+# Analysis per target
 # -----------------------------
 def analyze_target_and_maybe_notify(exp, event_key: str, target_dt: datetime, target_item: dict, state: dict):
     target = target_item
     print("[INFO] Target:", target_dt.strftime("%Y-%m-%d %H:%M"), target["lottery"], target["draw"])
 
-    # ✅ GATE: no picks si falta data previa debida (cross-match incompleto)
     missing = missing_due_updates_before_target(target_dt)
     if missing and (not FORCE_NOTIFY):
         print("[INFO] Missing due updates before this target. Skipping picks.")
@@ -696,7 +698,6 @@ def analyze_target_and_maybe_notify(exp, event_key: str, target_dt: datetime, ta
             print("[INFO] Missing:", m)
         return None
 
-    # 1) Fuentes permitidas = sorteos previos DEL DÍA (por hora) (secuencia)
     prior_pairs = set()
     for it in SCHEDULE:
         dt = draw_datetime_today_from_item(it)
@@ -706,95 +707,34 @@ def analyze_target_and_maybe_notify(exp, event_key: str, target_dt: datetime, ta
             continue
         prior_pairs.add((it["lottery"], it["draw"]))
 
-    # 2) Números observados HOY en esos sorteos previos
     obs_nums = observed_nums_today_before(target_dt)
 
-    # ✅ Regla especial: PRIMER target del día (no hay prior_pairs / obs)
-    #    -> usa MI/Chi² pero con recencia fija para evitar repetición eterna.
-    if not prior_pairs:
-        target_dt_naive = target_dt.replace(tzinfo=None)
-        cutoff = target_dt_naive - timedelta(days=FIRST_TARGET_RECENT_DAYS)
-        recent_mask = exp["fecha_dt"] >= cutoff
-
-        def src_filter_first(e, _rm=recent_mask):
-            return _rm & ~((e["lottery"] == target["lottery"]) & (e["sorteo"] == target["draw"]))
-
-        rec_hist = recommend_for_target(
-            exp,
-            src_filter_first,
-            target["lottery"],
-            target["draw"],
-            lag_days=0,
-            top_n=TOPK_FULL
-        )
-        used_rows = int(recent_mask.sum())
-        used_pairs = 0
+    base_mask = exp.apply(lambda r: (r.get("lottery"), r.get("sorteo")) in prior_pairs, axis=1)
+    if obs_nums:
+        num_mask = exp["num"].astype(str).isin(obs_nums)
+        mask = base_mask & num_mask
     else:
-        # 3) Construir máscara de fuentes dentro del histórico:
-        #    - SOLO eventos cuyo (lottery,sorteo) está en prior_pairs
-        #    - y además num ∈ obs_nums (si existe) para forzar cross-match real
-        base_mask = exp.apply(lambda r: (r.get("lottery"), r.get("sorteo")) in prior_pairs, axis=1)
-        if obs_nums:
-            num_mask = exp["num"].astype(str).isin(obs_nums)
-            mask = base_mask & num_mask
-        else:
-            mask = base_mask
+        mask = base_mask
 
-        # ✅ CAP anti-dilución (si hay demasiado histórico usado)
-        target_dt_naive = target_dt.replace(tzinfo=None)
-        used_pairs = len(prior_pairs)
+    mask_idx = set(exp[mask].index.tolist())
 
-        if mask.sum() > MAX_SOURCE_ROWS:
-            cutoff = target_dt_naive - timedelta(days=RECENT_DAYS_CAP)
-            mask = mask & (exp["fecha_dt"] >= cutoff)
+    if len(mask_idx) < 10 and prior_pairs:
+        mask2 = base_mask
+        mask_idx = set(exp[mask2].index.tolist())
 
-        if mask.sum() > MAX_SOURCE_ROWS:
-            tmp = exp[mask].sort_values("fecha_dt")
-            tail_idx = tmp.tail(MAX_SOURCE_ROWS).index
-            mask = exp.index.isin(tail_idx)
+    if not mask_idx:
+        src_filter = lambda e: ~((e["lottery"] == target["lottery"]) & (e["sorteo"] == target["draw"]))
+    else:
+        src_filter = lambda e, _m=mask_idx: e.index.isin(_m)
 
-        mask_idx = set(exp[mask].index.tolist())
-        used_rows = len(mask_idx)
-
-        # Fallback: si no hay suficiente fuente, usa solo prior_pairs sin filtrar por num
-        if len(mask_idx) < 10 and prior_pairs:
-            mask2 = base_mask
-            if mask2.sum() > MAX_SOURCE_ROWS:
-                cutoff = target_dt_naive - timedelta(days=RECENT_DAYS_CAP)
-                mask2 = mask2 & (exp["fecha_dt"] >= cutoff)
-            if mask2.sum() > MAX_SOURCE_ROWS:
-                tmp2 = exp[mask2].sort_values("fecha_dt")
-                tail_idx2 = tmp2.tail(MAX_SOURCE_ROWS).index
-                mask2 = exp.index.isin(tail_idx2)
-
-            mask_idx = set(exp[mask2].index.tolist())
-            used_rows = len(mask_idx)
-
-        # Fallback final: si sigue vacío, vuelve a lo clásico (excluir solo el mismo target) PERO con recencia
-        if not mask_idx:
-            cutoff = target_dt_naive - timedelta(days=RECENT_DAYS_CAP)
-            recent_mask = exp["fecha_dt"] >= cutoff
-            def src_filter(e, _rm=recent_mask):
-                return _rm & ~((e["lottery"] == target["lottery"]) & (e["sorteo"] == target["draw"]))
-            rec_hist = recommend_for_target(
-                exp,
-                src_filter,
-                target["lottery"],
-                target["draw"],
-                lag_days=0,
-                top_n=TOPK_FULL
-            )
-            used_rows = int(recent_mask.sum())
-        else:
-            src_filter = lambda e, _m=mask_idx: e.index.isin(_m)
-            rec_hist = recommend_for_target(
-                exp,
-                src_filter,
-                target["lottery"],
-                target["draw"],
-                lag_days=0,
-                top_n=TOPK_FULL
-            )
+    rec_hist = recommend_for_target(
+        exp,
+        src_filter,
+        target["lottery"],
+        target["draw"],
+        lag_days=0,
+        top_n=TOPK_FULL
+    )
 
     if rec_hist is None or rec_hist.empty:
         print("[INFO] Not enough data to compute recommendations for target.")
@@ -841,16 +781,14 @@ def analyze_target_and_maybe_notify(exp, event_key: str, target_dt: datetime, ta
                 "has_intraday_sources": 0,
                 "intraday_events": 0,
                 "today_observed_nums": len(obs_nums),
-                "source_pairs_today": int(used_pairs),
-                "source_rows_hist_used": int(used_rows),
+                "source_pairs_today": len(prior_pairs),
+                "source_rows_hist_used": len(mask_idx),
             }
         }
     }
 
-    # Log SIEMPRE
     log_pick(payload)
 
-    # Telegram solo si cumple o TEST
     if (not ok) and (not FORCE_NOTIFY):
         print("[INFO] Thresholds not met. No message sent for this target.")
         return payload
@@ -878,7 +816,7 @@ def analyze_target_and_maybe_notify(exp, event_key: str, target_dt: datetime, ta
     msg.append("")
     msg.append("📊 Debug:")
     msg.append(f"best_signal={best_signal_hist} best_a11={best_a11_hist} ok_alert={bool(ok)}")
-    msg.append(f"today_observed_nums={len(obs_nums)} source_rows_hist_used={int(used_rows)}")
+    msg.append(f"today_observed_nums={len(obs_nums)} source_rows_hist_used={len(mask_idx)}")
 
     send_telegram("\n".join(msg))
     print("[OK] Telegram sent for target.")
@@ -910,9 +848,24 @@ def main():
 
     # 2) FORCE REFRESH + BACKFILL (HOY + AYER)
     try:
-        state = force_refresh_backfill(state, days_back=1, max_attempts=5)
+        if MANUAL_RUN:
+            state, updated_backfill_today = force_refresh_backfill(
+                state,
+                days_back=1,
+                max_attempts=8,
+                backoff_seconds=[2, 5, 10, 20, 30, 45, 60, 90],
+            )
+        else:
+            state, updated_backfill_today = force_refresh_backfill(state, days_back=1, max_attempts=5)
     except Exception as e:
         print(f"[WARN] force_refresh_backfill failed: {e}")
+        updated_backfill_today = []
+
+    # ✅ FIX CLAVE: también cuenta updates que llegaron por backfill
+    if updated_backfill_today:
+        for it in updated_backfill_today:
+            print("[OK] Updated (backfill today):", it["lottery"], it["draw"])
+        updated_today = updated_today + updated_backfill_today
 
     # 3) Grading siempre
     try:
@@ -946,7 +899,7 @@ def main():
         print("[OK] runner finished")
         return
 
-    # 5) Si no hubo updates hoy y no es test, no spam
+    # ✅ NO picks si no hay updates HOY
     if not updated_today and (not FORCE_NOTIFY):
         print("[INFO] No new updates today. Skipping analysis/notify.")
         save_state(state)
@@ -967,7 +920,7 @@ def main():
         print("[OK] runner finished")
         return
 
-    # 7) Build history + process next targets (handles dual 18:00 y dual 21:00)
+    # 7) Build history + process next targets
     exp = build_exploded_history()
     if exp is None:
         print("[INFO] No history loaded. Exiting.")
