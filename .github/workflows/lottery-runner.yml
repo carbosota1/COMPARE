@@ -1,4 +1,4 @@
-name: LotMix - Intraday Runner
+name: COMPARE - Intraday Runner
 
 on:     
   workflow_dispatch:
