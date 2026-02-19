@@ -9,9 +9,12 @@
     "2026-02-18|La Nacional|Loteria Nacional- Gana Más": "done",
     "2026-02-18|La Nacional|Loteria Nacional- Noche": "done",
     "2026-02-18|La Suerte|Quiniela La Suerte": "done",
-    "2026-02-18|La Suerte|Quiniela La Suerte 6PM": "done"
+    "2026-02-18|La Suerte|Quiniela La Suerte 6PM": "done",
+    "2026-02-19|Anguilla|Anguila 10AM": "done"
   },
-  "last_event_key": "2026-02-18|La Nacional|Loteria Nacional- Noche",
-  "sent_by_target_fp": {},
+  "last_event_key": "2026-02-19|Anguilla|Anguila 10AM",
+  "sent_by_target_fp": {
+    "2026-02-19 12:00|La Primera|Quiniela La Primera": "b9eda51058778462"
+  },
   "last_wait_key": ""
 }
