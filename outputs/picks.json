@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-02-27T19:41:03.947095-04:00",
-  "event_key": "2026-02-27|La Primera|Quiniela La Primera Noche",
+  "generated_at": "2026-02-28T08:20:27.009486-04:00",
+  "event_key": "2026-02-28|TEST|NO-UPDATE",
   "target": {
-    "time_rd": "2026-02-27 21:00",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Noche"
+    "time_rd": "2026-02-28 10:00",
+    "lottery": "Anguilla",
+    "draw": "Anguila 10AM"
   },
   "best_play": {
-    "time_rd": "2026-02-27 21:00",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Noche",
+    "time_rd": "2026-02-28 10:00",
+    "lottery": "Anguilla",
+    "draw": "Anguila 10AM",
     "top12": [
-      "12",
-      "49",
-      "13",
+      "85",
+      "08",
+      "40",
+      "05",
+      "58",
+      "76",
       "35",
+      "23",
+      "83",
       "61",
-      "80",
-      "90",
-      "84",
-      "11",
-      "38",
-      "03",
-      "07"
+      "92",
+      "89"
     ],
     "topq": [
-      "12",
-      "49",
-      "13"
+      "85",
+      "08",
+      "40"
     ],
     "pales": [
-      "12-49",
-      "12-13",
-      "12-35"
+      "08-85",
+      "40-85",
+      "05-85"
     ],
-    "fingerprint": "83b0b5d91d152612",
-    "ok_alert": false,
-    "best_signal": 0.00415250659904333,
+    "fingerprint": "04fe56568e1b73f2",
+    "ok_alert": true,
+    "best_signal": 0.00652344171091045,
     "best_a11": 13,
     "debug": {
-      "best_signal_hist": 0.00415250659904333,
+      "best_signal_hist": 0.00652344171091045,
       "best_a11_hist": 13,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 23,
-      "source_pairs_today": 8,
-      "source_rows_hist_used": 5987
+      "today_observed_nums": 0,
+      "source_pairs_today": 0,
+      "source_rows_hist_used": 0
     }
   }
 }
