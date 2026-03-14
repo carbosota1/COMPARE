@@ -196,3 +196,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-03-13|La Primera|Quiniela La Primera Noche|2026-03-13 19:00,2026-03-13,2026-03-13 19:00,La Primera,Quiniela La Primera Noche,01-07-92,0.0020087435829521183,12,False,0,0,0,4406.0
 2026-03-13|Anguilla|Anguila 9PM|2026-03-13 21:00,2026-03-13,2026-03-13 21:00,Anguilla,Anguila 9PM,78-48-53,0.0037689042825087946,9,False,0,1,0,5571.0
 2026-03-13|La Nacional|Loteria Nacional- Noche|2026-03-13 21:00,2026-03-13,2026-03-13 21:00,La Nacional,Loteria Nacional- Noche,94-24-04,0.002197210341088912,12,True,0,0,0,5571.0
+2026-03-14|Anguilla|Anguila 10AM|2026-03-14 10:00,2026-03-14,2026-03-14 10:00,Anguilla,Anguila 10AM,56-73-58,0.0063608010385972176,14,True,0,1,0,0.0
