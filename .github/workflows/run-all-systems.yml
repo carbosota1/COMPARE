@@ -2,6 +2,8 @@ name: Run All Lottery Systems
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 13 * * *"
 
 jobs:
   trigger-systems:
