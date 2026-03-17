@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-17T12:46:59.312569-04:00",
-  "event_key": "2026-03-17|La Suerte|Quiniela La Suerte",
+  "generated_at": "2026-03-17T13:04:40.592057-04:00",
+  "event_key": "2026-03-17|Anguilla|Anguila 1PM",
   "target": {
     "time_rd": "2026-03-17 13:00",
     "lottery": "Anguilla",
@@ -36,10 +36,10 @@
     ],
     "fingerprint": "8944c0b1ec3cb4ef",
     "ok_alert": false,
-    "best_signal": 0.0010888868201914005,
+    "best_signal": 0.0010247155525518537,
     "best_a11": 4,
     "debug": {
-      "best_signal_hist": 0.0010888868201914005,
+      "best_signal_hist": 0.0010247155525518537,
       "best_a11_hist": 4,
       "has_intraday_sources": 0,
       "intraday_events": 0,
