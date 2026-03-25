@@ -1,106 +1,55 @@
 {
-  "generated_at": "2026-03-24T19:12:35.312726-04:00",
-  "event_key": "2026-03-24|TEST|NO-UPDATE",
+  "generated_at": "2026-03-25T05:33:33.680010-04:00",
+  "event_key": "2026-03-25|TEST|NO-UPDATE",
   "items": [
     {
-      "generated_at": "2026-03-24T19:12:28.814155-04:00",
-      "event_key": "2026-03-24|TEST|NO-UPDATE",
+      "generated_at": "2026-03-25T05:33:32.994215-04:00",
+      "event_key": "2026-03-25|TEST|NO-UPDATE",
       "target": {
-        "time_rd": "2026-03-24 21:00",
+        "time_rd": "2026-03-25 10:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 9PM"
+        "draw": "Anguila 10AM"
       },
       "best_play": {
-        "time_rd": "2026-03-24 21:00",
+        "time_rd": "2026-03-25 10:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 9PM",
+        "draw": "Anguila 10AM",
         "top12": [
-          "57",
-          "92",
-          "87",
-          "33",
-          "02",
-          "48",
-          "63",
+          "85",
+          "08",
+          "40",
+          "05",
+          "58",
           "76",
-          "18",
           "83",
-          "55",
-          "34"
-        ],
-        "topq": [
-          "57",
-          "92",
-          "87"
-        ],
-        "pales": [
-          "57-92",
-          "57-87",
-          "33-57"
-        ],
-        "fingerprint": "52d1026cc44a9624",
-        "ok_alert": false,
-        "best_signal": 0.006512838745990583,
-        "best_a11": 6,
-        "debug": {
-          "best_signal_hist": 0.006512838745990583,
-          "best_a11_hist": 6,
-          "has_intraday_sources": 0,
-          "intraday_events": 0,
-          "today_observed_nums": 24,
-          "source_pairs_today": 8,
-          "source_rows_hist_used": 6433
-        }
-      }
-    },
-    {
-      "generated_at": "2026-03-24T19:12:34.854456-04:00",
-      "event_key": "2026-03-24|TEST|NO-UPDATE",
-      "target": {
-        "time_rd": "2026-03-24 21:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche"
-      },
-      "best_play": {
-        "time_rd": "2026-03-24 21:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche",
-        "top12": [
-          "48",
-          "03",
-          "47",
+          "23",
+          "28",
           "61",
-          "87",
-          "11",
-          "90",
-          "80",
-          "13",
-          "38",
-          "49",
-          "84"
+          "92",
+          "89"
         ],
         "topq": [
-          "48",
-          "03",
-          "47"
+          "85",
+          "08",
+          "40"
         ],
         "pales": [
-          "03-48",
-          "47-48",
-          "48-61"
+          "08-85",
+          "40-85",
+          "05-85"
         ],
-        "fingerprint": "3dc65365f1922bf3",
+        "fingerprint": "5d22835efa2b8e81",
         "ok_alert": true,
-        "best_signal": 0.0011960242644008486,
-        "best_a11": 13,
+        "best_signal": 0.006256983243427043,
+        "best_a11": 14,
         "debug": {
-          "best_signal_hist": 0.0011960242644008486,
-          "best_a11_hist": 13,
+          "best_signal_hist": 0.006256983243427043,
+          "best_a11_hist": 14,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 24,
-          "source_pairs_today": 8,
-          "source_rows_hist_used": 6433
+          "today_observed_nums": 0,
+          "source_pairs_today": 0,
+          "source_rows_hist_used": 0
         }
       }
     }
