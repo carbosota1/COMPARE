@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-27T11:25:01.769060-04:00",
-  "event_key": "2026-03-27|Anguilla|Anguila 10AM",
+  "generated_at": "2026-03-27T12:08:36.507744-04:00",
+  "event_key": "2026-03-27|La Primera|Quiniela La Primera",
   "target": {
     "time_rd": "2026-03-27 12:00",
     "lottery": "La Primera",
@@ -22,7 +22,7 @@
       "10",
       "97",
       "23",
-      "14"
+      "83"
     ],
     "topq": [
       "88",
@@ -34,12 +34,12 @@
       "88-91",
       "24-88"
     ],
-    "fingerprint": "e34ba51a18f9988d",
+    "fingerprint": "2868fbeabff55e85",
     "ok_alert": false,
-    "best_signal": 0.011685393892879726,
+    "best_signal": 0.011076795193448485,
     "best_a11": 1,
     "debug": {
-      "best_signal_hist": 0.011685393892879726,
+      "best_signal_hist": 0.011076795193448485,
       "best_a11_hist": 1,
       "has_intraday_sources": 0,
       "intraday_events": 0,
