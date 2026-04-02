@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-02T15:13:34.052379-04:00",
-  "event_key": "2026-04-02|Anguilla|Anguila 1PM",
+  "generated_at": "2026-04-02T17:21:39.652263-04:00",
+  "event_key": "2026-04-02|La Nacional|Loteria Nacional- Gana Más",
   "target": {
     "time_rd": "2026-04-02 18:00",
     "lottery": "La Suerte",
@@ -36,16 +36,16 @@
     ],
     "fingerprint": "d3c7f1015c93e1ff",
     "ok_alert": false,
-    "best_signal": 0.0027855250366987045,
+    "best_signal": 0.003113038472448901,
     "best_a11": 10,
     "debug": {
-      "best_signal_hist": 0.0027855250366987045,
+      "best_signal_hist": 0.003113038472448901,
       "best_a11_hist": 10,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 11,
+      "today_observed_nums": 14,
       "source_pairs_today": 5,
-      "source_rows_hist_used": 1936
+      "source_rows_hist_used": 2460
     }
   }
 }
