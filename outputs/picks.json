@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-03T08:56:28.482268-04:00",
-  "event_key": "2026-04-03|TEST|NO-UPDATE",
+  "generated_at": "2026-04-04T08:45:23.930356-04:00",
+  "event_key": "2026-04-04|TEST|NO-UPDATE",
   "target": {
-    "time_rd": "2026-04-03 10:00",
+    "time_rd": "2026-04-04 10:00",
     "lottery": "Anguilla",
     "draw": "Anguila 10AM"
   },
   "best_play": {
-    "time_rd": "2026-04-03 10:00",
+    "time_rd": "2026-04-04 10:00",
     "lottery": "Anguilla",
     "draw": "Anguila 10AM",
     "top12": [
@@ -36,10 +36,10 @@
     ],
     "fingerprint": "3d6d67741df7ba14",
     "ok_alert": true,
-    "best_signal": 0.006190076380243759,
+    "best_signal": 0.006173218910342207,
     "best_a11": 14,
     "debug": {
-      "best_signal_hist": 0.006190076380243759,
+      "best_signal_hist": 0.006173218910342207,
       "best_a11_hist": 14,
       "has_intraday_sources": 0,
       "intraday_events": 0,
