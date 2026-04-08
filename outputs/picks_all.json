@@ -1,55 +1,106 @@
 {
-  "generated_at": "2026-04-08T13:21:04.600257-04:00",
-  "event_key": "2026-04-08|Anguilla|Anguila 1PM",
+  "generated_at": "2026-04-08T17:36:32.739238-04:00",
+  "event_key": "2026-04-08|La Nacional|Loteria Nacional- Gana Más",
   "items": [
     {
-      "generated_at": "2026-04-08T13:21:03.954284-04:00",
-      "event_key": "2026-04-08|Anguilla|Anguila 1PM",
+      "generated_at": "2026-04-08T17:36:27.920165-04:00",
+      "event_key": "2026-04-08|La Nacional|Loteria Nacional- Gana Más",
       "target": {
-        "time_rd": "2026-04-08 14:30",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Gana Más"
+        "time_rd": "2026-04-08 18:00",
+        "lottery": "Anguilla",
+        "draw": "Anguila 6PM"
       },
       "best_play": {
-        "time_rd": "2026-04-08 14:30",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Gana Más",
+        "time_rd": "2026-04-08 18:00",
+        "lottery": "Anguilla",
+        "draw": "Anguila 6PM",
         "top12": [
-          "78",
-          "54",
-          "82",
           "00",
-          "19",
           "86",
-          "20",
-          "40",
-          "64",
-          "89",
-          "94",
-          "41"
+          "87",
+          "54",
+          "03",
+          "63",
+          "46",
+          "48",
+          "66",
+          "59",
+          "70",
+          "72"
         ],
         "topq": [
-          "78",
-          "54",
-          "82"
+          "00",
+          "86",
+          "87"
         ],
         "pales": [
-          "54-78",
-          "78-82",
-          "00-78"
+          "00-86",
+          "00-87",
+          "00-54"
         ],
-        "fingerprint": "f21fe245e6ffbe0e",
+        "fingerprint": "3ca9b50a1b1197f2",
         "ok_alert": false,
-        "best_signal": 0.002540133868044865,
-        "best_a11": 7,
+        "best_signal": 0.004476926618219625,
+        "best_a11": 3,
         "debug": {
-          "best_signal_hist": 0.002540133868044865,
-          "best_a11_hist": 7,
+          "best_signal_hist": 0.004476926618219625,
+          "best_a11_hist": 3,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 12,
-          "source_pairs_today": 4,
-          "source_rows_hist_used": 1389
+          "today_observed_nums": 15,
+          "source_pairs_today": 5,
+          "source_rows_hist_used": 2587
+        }
+      }
+    },
+    {
+      "generated_at": "2026-04-08T17:36:32.274637-04:00",
+      "event_key": "2026-04-08|La Nacional|Loteria Nacional- Gana Más",
+      "target": {
+        "time_rd": "2026-04-08 18:00",
+        "lottery": "La Suerte",
+        "draw": "Quiniela La Suerte 6PM"
+      },
+      "best_play": {
+        "time_rd": "2026-04-08 18:00",
+        "lottery": "La Suerte",
+        "draw": "Quiniela La Suerte 6PM",
+        "top12": [
+          "38",
+          "19",
+          "78",
+          "82",
+          "87",
+          "21",
+          "92",
+          "66",
+          "53",
+          "07",
+          "30",
+          "88"
+        ],
+        "topq": [
+          "38",
+          "19",
+          "78"
+        ],
+        "pales": [
+          "19-38",
+          "38-78",
+          "38-82"
+        ],
+        "fingerprint": "c67eaf2e6b45cc6d",
+        "ok_alert": false,
+        "best_signal": 0.0031423226974694922,
+        "best_a11": 9,
+        "debug": {
+          "best_signal_hist": 0.0031423226974694922,
+          "best_a11_hist": 9,
+          "has_intraday_sources": 0,
+          "intraday_events": 0,
+          "today_observed_nums": 15,
+          "source_pairs_today": 5,
+          "source_rows_hist_used": 2587
         }
       }
     }
