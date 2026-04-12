@@ -444,3 +444,5 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-04-11|La Suerte|Quiniela La Suerte|2026-04-11 12:30,2026-04-11,2026-04-11 12:30,La Suerte,Quiniela La Suerte,06-96-74,0.004294946704283688,1,False,0,0,0,388.0
 2026-04-11|Anguilla|Anguila 1PM|2026-04-11 13:00,2026-04-11,2026-04-11 13:00,Anguilla,Anguila 1PM,43-96-47,0.002700966907689023,0,False,0,0,0,906.0
 2026-04-11|La Nacional|Loteria Nacional- Gana Más|2026-04-11 14:30,2026-04-11,2026-04-11 14:30,La Nacional,Loteria Nacional- Gana Más,23-82-79,0.0007061427334968125,6,False,0,0,0,1348.0
+2026-04-11|Anguilla|Anguila 6PM|2026-04-11 18:00,2026-04-11,2026-04-11 18:00,Anguilla,Anguila 6PM,21-47-26,0.0029250639277554696,7,False,0,0,0,2495.0
+2026-04-11|La Suerte|Quiniela La Suerte 6PM|2026-04-11 18:00,2026-04-11,2026-04-11 18:00,La Suerte,Quiniela La Suerte 6PM,35-57-76,0.0008475601004827608,9,False,0,1,0,2495.0
