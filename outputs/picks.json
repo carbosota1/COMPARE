@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-04-12T13:22:55.305867-04:00",
-  "event_key": "2026-04-12|Anguilla|Anguila 1PM",
+  "generated_at": "2026-04-12T20:10:21.200485-04:00",
+  "event_key": "2026-04-12|La Primera|Quiniela La Primera Noche",
   "target": {
-    "time_rd": "2026-04-12 14:30",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Gana Más"
+    "time_rd": "2026-04-12 21:00",
+    "lottery": "Anguilla",
+    "draw": "Anguila 9PM"
   },
   "best_play": {
-    "time_rd": "2026-04-12 14:30",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Gana Más",
+    "time_rd": "2026-04-12 21:00",
+    "lottery": "Anguilla",
+    "draw": "Anguila 9PM",
     "top12": [
-      "60",
       "14",
-      "64",
-      "40",
-      "20",
-      "89",
-      "94",
-      "41",
-      "95",
-      "37",
-      "13",
-      "82"
+      "78",
+      "63",
+      "48",
+      "76",
+      "18",
+      "83",
+      "02",
+      "55",
+      "25",
+      "34",
+      "05"
     ],
     "topq": [
-      "60",
       "14",
-      "64"
+      "78",
+      "63"
     ],
     "pales": [
-      "14-60",
-      "60-64",
-      "40-60"
+      "14-78",
+      "14-63",
+      "14-48"
     ],
-    "fingerprint": "c2b3aebe7438751c",
+    "fingerprint": "1cf9151e6f89a719",
     "ok_alert": false,
-    "best_signal": 0.0011010307782586446,
-    "best_a11": 3,
+    "best_signal": 0.0015500316699686755,
+    "best_a11": 11,
     "debug": {
-      "best_signal_hist": 0.0011010307782586446,
-      "best_a11_hist": 3,
+      "best_signal_hist": 0.0015500316699686755,
+      "best_a11_hist": 11,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 12,
-      "source_pairs_today": 4,
-      "source_rows_hist_used": 1503
+      "today_observed_nums": 24,
+      "source_pairs_today": 9,
+      "source_rows_hist_used": 7949
     }
   }
 }
