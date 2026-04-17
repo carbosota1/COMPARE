@@ -489,3 +489,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-04-17|Anguilla|Anguila 10AM|2026-04-17 10:00,2026-04-17,2026-04-17 10:00,Anguilla,Anguila 10AM,74-42-77,0.006350326140032704,14,True,0,0,0,0.0
 2026-04-17|La Primera|Quiniela La Primera|2026-04-17 12:00,2026-04-17,2026-04-17 12:00,La Primera,Quiniela La Primera,43-29-31,0.0038291881543137487,2,False,0,0,0,70.0
 2026-04-17|La Suerte|Quiniela La Suerte|2026-04-17 12:30,2026-04-17,2026-04-17 12:30,La Suerte,Quiniela La Suerte,21-96-00,0.004596567990620826,4,False,0,0,0,357.0
+2026-04-17|Anguilla|Anguila 1PM|2026-04-17 13:00,2026-04-17,2026-04-17 13:00,Anguilla,Anguila 1PM,43-00-01,0.006191199259841929,6,False,0,1,0,868.0
