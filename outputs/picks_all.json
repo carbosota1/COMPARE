@@ -1,106 +1,55 @@
 {
-  "generated_at": "2026-04-16T19:18:46.902430-04:00",
-  "event_key": "2026-04-16|La Primera|Quiniela La Primera Noche",
+  "generated_at": "2026-04-17T09:10:30.065846-04:00",
+  "event_key": "2026-04-17|TEST|NO-UPDATE",
   "items": [
     {
-      "generated_at": "2026-04-16T19:18:40.972979-04:00",
-      "event_key": "2026-04-16|La Primera|Quiniela La Primera Noche",
+      "generated_at": "2026-04-17T09:10:29.632383-04:00",
+      "event_key": "2026-04-17|TEST|NO-UPDATE",
       "target": {
-        "time_rd": "2026-04-16 21:00",
+        "time_rd": "2026-04-17 10:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 9PM"
+        "draw": "Anguila 10AM"
       },
       "best_play": {
-        "time_rd": "2026-04-16 21:00",
+        "time_rd": "2026-04-17 10:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 9PM",
+        "draw": "Anguila 10AM",
         "top12": [
-          "27",
-          "81",
-          "83",
-          "48",
-          "76",
-          "63",
-          "18",
-          "55",
-          "02",
+          "85",
+          "08",
+          "58",
           "05",
-          "25",
-          "34"
-        ],
-        "topq": [
-          "27",
-          "81",
-          "83"
-        ],
-        "pales": [
-          "27-81",
-          "27-83",
-          "27-48"
-        ],
-        "fingerprint": "3a52a594bf92a73c",
-        "ok_alert": false,
-        "best_signal": 0.0035271589950941484,
-        "best_a11": 10,
-        "debug": {
-          "best_signal_hist": 0.0035271589950941484,
-          "best_a11_hist": 10,
-          "has_intraday_sources": 0,
-          "intraday_events": 0,
-          "today_observed_nums": 21,
-          "source_pairs_today": 8,
-          "source_rows_hist_used": 5814
-        }
-      }
-    },
-    {
-      "generated_at": "2026-04-16T19:18:46.429757-04:00",
-      "event_key": "2026-04-16|La Primera|Quiniela La Primera Noche",
-      "target": {
-        "time_rd": "2026-04-16 21:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche"
-      },
-      "best_play": {
-        "time_rd": "2026-04-16 21:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche",
-        "top12": [
-          "12",
-          "27",
-          "90",
-          "81",
-          "84",
+          "40",
+          "83",
+          "76",
+          "23",
           "61",
-          "11",
-          "80",
-          "13",
-          "38",
-          "49",
-          "07"
+          "68",
+          "92",
+          "89"
         ],
         "topq": [
-          "12",
-          "27",
-          "90"
+          "85",
+          "08",
+          "58"
         ],
         "pales": [
-          "12-27",
-          "12-90",
-          "12-81"
+          "08-85",
+          "58-85",
+          "05-85"
         ],
-        "fingerprint": "c57fc4a13440b2e6",
-        "ok_alert": false,
-        "best_signal": 0.004073147359158,
-        "best_a11": 8,
+        "fingerprint": "7b77d96d748c46ad",
+        "ok_alert": true,
+        "best_signal": 0.006350326140032704,
+        "best_a11": 14,
         "debug": {
-          "best_signal_hist": 0.004073147359158,
-          "best_a11_hist": 8,
+          "best_signal_hist": 0.006350326140032704,
+          "best_a11_hist": 14,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 21,
-          "source_pairs_today": 8,
-          "source_rows_hist_used": 5814
+          "today_observed_nums": 0,
+          "source_pairs_today": 0,
+          "source_rows_hist_used": 0
         }
       }
     }
