@@ -523,3 +523,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-04-21|La Nacional|Loteria Nacional- Gana Más|2026-04-21 14:30,2026-04-21,2026-04-21 14:30,La Nacional,Loteria Nacional- Gana Más,06-67-65,0.002693394828693181,6,False,0,0,0,1236.0
 2026-04-21|Anguilla|Anguila 9PM|2026-04-21 21:00,2026-04-21,2026-04-21 21:00,Anguilla,Anguila 9PM,21-93-27,0.006662061457508049,11,False,0,0,0,6051.0
 2026-04-21|La Nacional|Loteria Nacional- Noche|2026-04-21 21:00,2026-04-21,2026-04-21 21:00,La Nacional,Loteria Nacional- Noche,80-20-81,0.0009659753382326033,11,False,0,1,0,6051.0
+2026-04-22|Anguilla|Anguila 10AM|2026-04-22 10:00,2026-04-22,2026-04-22 10:00,Anguilla,Anguila 10AM,41-58-72,0.00661393331208075,14,True,1,1,0,0.0
