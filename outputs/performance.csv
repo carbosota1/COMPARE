@@ -590,3 +590,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-04-30|Anguilla|Anguila 10AM|2026-04-30 10:00,2026-04-30,2026-04-30 10:00,Anguilla,Anguila 10AM,05-33-26,0.006694428188974685,14,True,0,1,0,0.0
 2026-04-30|La Primera|Quiniela La Primera|2026-04-30 12:00,2026-04-30,2026-04-30 12:00,La Primera,Quiniela La Primera,65-83-18,0.0002290516837554572,1,False,0,1,0,71.0
 2026-04-30|Anguilla|Anguila 1PM|2026-04-30 13:00,2026-04-30,2026-04-30 13:00,Anguilla,Anguila 1PM,81-78-00,0.0013223868408746167,4,False,0,0,0,946.0
+2026-04-30|La Nacional|Loteria Nacional- Gana Más|2026-04-30 14:30,2026-04-30,2026-04-30 14:30,La Nacional,Loteria Nacional- Gana Más,02-79-06,0.0020758724402653852,7,False,0,0,0,1555.0
