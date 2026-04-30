@@ -1,11 +1,10 @@
-name: Run All Lottery Systems
+name: Run All Systems + Cross Analyzer
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 12 * * *"
 
 jobs:
+
   trigger-systems:
     runs-on: ubuntu-latest
 
@@ -16,7 +15,7 @@ jobs:
           curl -X POST \
           -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
           -H "Accept: application/vnd.github+json" \
-          https://api.github.com/repos/carbosota1/LotMix/actions/workflows/lottery-runner.yml/dispatches \
+          https://api.github.com/repos/carbosota1/LOTMIX/actions/workflows/lottery-runner.yml/dispatches \
           -d '{"ref":"main"}'
 
       - name: Trigger UPDATELOTMIX
@@ -34,3 +33,79 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           https://api.github.com/repos/carbosota1/COMPARE/actions/workflows/lottery-runner.yml/dispatches \
           -d '{"ref":"main"}'
+
+      - name: Trigger CLAUDE-LOTMIX
+        run: |
+          curl -X POST \
+          -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+          -H "Accept: application/vnd.github+json" \
+          https://api.github.com/repos/carbosota1/CLAUDE-LOTMIX/actions/workflows/claude_lotmix.yml/dispatches \
+          -d '{"ref":"main"}'
+
+  wait-for-results:
+    runs-on: ubuntu-latest
+    needs: trigger-systems
+
+    steps:
+      - name: Wait for systems
+        run: sleep 120
+
+  cross-analyzer:
+    runs-on: ubuntu-latest
+    needs: wait-for-results
+
+    steps:
+
+      - name: Download COMPARE picks
+        run: |
+          curl -o compare.json \
+          https://raw.githubusercontent.com/carbosota1/COMPARE/main/outputs/picks.json
+
+      - name: Download UPDATELOTMIX picks
+        run: |
+          curl -o update.json \
+          https://raw.githubusercontent.com/carbosota1/UPDATELOTMIX/main/outputs/picks.json
+
+      - name: Download LOTMIX picks
+        run: |
+          curl -o lotmix.json \
+          https://raw.githubusercontent.com/carbosota1/LOTMIX/main/outputs/picks.json
+
+      - name: Download CLAUDE-LOTMIX picks
+        run: |
+          curl -o claude.json \
+          https://raw.githubusercontent.com/carbosota1/CLAUDE-LOTMIX/main/outputs/picks.json
+
+      - name: Run Cross Analyzer
+        run: |
+          python <<EOF
+import json
+from collections import Counter, defaultdict
+
+files = [
+    ("COMPARE","compare.json"),
+    ("UPDATE","update.json"),
+    ("LOTMIX","lotmix.json"),
+    ("CLAUDE","claude.json")
+]
+
+numbers = []
+sources = defaultdict(list)
+
+for name, f in files:
+    data = json.load(open(f))
+    nums = set(data["top3"] + data["top12"])
+    numbers.extend(nums)
+    for n in nums:
+        sources[n].append(name)
+
+counts = Counter(numbers)
+
+THRESHOLD = 2
+
+print("🔥 SUPER SIGNALS 🔥\n")
+
+for n, c in counts.items():
+    if c >= THRESHOLD:
+        print(f"{n} → {sources[n]}")
+EOF
