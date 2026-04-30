@@ -65,9 +65,9 @@ jobs:
         run: |
           curl -L -f -o lotmix.json https://raw.githubusercontent.com/carbosota1/LOTMIX/main/outputs/picks.json
 
-      - name: Download CLAUDE-LOTMIX picks
+      - name: Download CLAUDE-LOTMIX state
         run: |
-          curl -L -f -o claude.json https://raw.githubusercontent.com/carbosota1/CLAUDE-LOTMIX/main/outputs/picks.json
+          curl -L -f -o claude.json https://raw.githubusercontent.com/carbosota1/CLAUDE-LOTMIX/main/data/state.json
 
       - name: Install requests
         run: pip install requests
@@ -112,25 +112,27 @@ jobs:
                   print(f"❌ Error leyendo {path}: {e}")
                   return {}
 
-          def extract_numbers(data):
-              """
-              Soporta formatos:
-              1) {"top3": [...], "top12": [...]}
-              2) {"best_play": {"topq": [...], "top12": [...]}}
-              3) {"best_play": {"top3": [...], "top12": [...]}}
-              """
-
+          def extract_numbers(system_name, data):
               top3 = []
               top12 = []
 
-              if isinstance(data, dict):
-                  top3 = data.get("top3", []) or data.get("topq", [])
-                  top12 = data.get("top12", [])
+              if not isinstance(data, dict):
+                  return top3, top12
 
-                  best_play = data.get("best_play", {})
-                  if isinstance(best_play, dict):
-                      top3 = best_play.get("top3", []) or best_play.get("topq", []) or top3
-                      top12 = best_play.get("top12", []) or top12
+              # Formato normal: outputs/picks.json
+              top3 = data.get("top3", []) or data.get("topq", [])
+              top12 = data.get("top12", [])
+
+              # Formato con best_play
+              best_play = data.get("best_play", {})
+              if isinstance(best_play, dict):
+                  top3 = best_play.get("top3", []) or best_play.get("topq", []) or top3
+                  top12 = best_play.get("top12", []) or top12
+
+              # Formato CLAUDE-LOTMIX: data/state.json
+              if system_name == "CLAUDE-LOTMIX":
+                  top12 = data.get("last_top12", []) or top12
+                  top3 = top12[:3]
 
               top3 = [normalize_num(n) for n in top3]
               top12 = [normalize_num(n) for n in top12]
@@ -143,7 +145,7 @@ jobs:
 
           for system_name, file_path in FILES:
               data = safe_load(file_path)
-              top3, top12 = extract_numbers(data)
+              top3, top12 = extract_numbers(system_name, data)
 
               all_nums = list(dict.fromkeys(top3 + top12))
 
@@ -185,20 +187,15 @@ jobs:
               msg += "━━━━━━━━━━━━━━\n"
               msg += "📊 RESUMEN POR SISTEMA\n\n"
 
-              for item in system_details:
-                  msg += f"🔹 {item['system']}\n"
-                  msg += f"Top3: {', '.join(item['top3']) if item['top3'] else 'N/A'}\n"
-                  msg += f"Top12: {', '.join(item['top12'][:12]) if item['top12'] else 'N/A'}\n\n"
-
           else:
               msg = "❌ NO JUGAR — SIN SUPER SIGNAL\n\n"
               msg += "No hay coincidencia mínima de 2 sistemas.\n\n"
               msg += "📊 RESUMEN POR SISTEMA\n\n"
 
-              for item in system_details:
-                  msg += f"🔹 {item['system']}\n"
-                  msg += f"Top3: {', '.join(item['top3']) if item['top3'] else 'N/A'}\n"
-                  msg += f"Top12: {', '.join(item['top12'][:12]) if item['top12'] else 'N/A'}\n\n"
+          for item in system_details:
+              msg += f"🔹 {item['system']}\n"
+              msg += f"Top3: {', '.join(item['top3']) if item['top3'] else 'N/A'}\n"
+              msg += f"Top12: {', '.join(item['top12'][:12]) if item['top12'] else 'N/A'}\n\n"
 
           token = os.environ.get("TELEGRAM_BOT_TOKEN2")
           chat_id = os.environ.get("TELEGRAM_CHAT_ID2")
