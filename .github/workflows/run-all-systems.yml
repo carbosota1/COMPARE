@@ -46,7 +46,7 @@ jobs:
 
     steps:
       - name: Wait for systems
-        run: sleep 120
+        run: sleep 180
 
   cross-analyzer:
     runs-on: ubuntu-latest
@@ -55,19 +55,19 @@ jobs:
     steps:
       - name: Download COMPARE picks
         run: |
-          curl -o compare.json https://raw.githubusercontent.com/carbosota1/COMPARE/main/outputs/picks.json
+          curl -L -f -o compare.json https://raw.githubusercontent.com/carbosota1/COMPARE/main/outputs/picks.json
 
       - name: Download UPDATELOTMIX picks
         run: |
-          curl -o update.json https://raw.githubusercontent.com/carbosota1/UPDATELOTMIX/main/outputs/picks.json
+          curl -L -f -o update.json https://raw.githubusercontent.com/carbosota1/UPDATELOTMIX/main/outputs/picks.json
 
       - name: Download LOTMIX picks
         run: |
-          curl -o lotmix.json https://raw.githubusercontent.com/carbosota1/LOTMIX/main/outputs/picks.json
+          curl -L -f -o lotmix.json https://raw.githubusercontent.com/carbosota1/LOTMIX/main/outputs/picks.json
 
       - name: Download CLAUDE-LOTMIX picks
         run: |
-          curl -o claude.json https://raw.githubusercontent.com/carbosota1/CLAUDE-LOTMIX/main/outputs/picks.json
+          curl -L -f -o claude.json https://raw.githubusercontent.com/carbosota1/CLAUDE-LOTMIX/main/outputs/picks.json
 
       - name: Install requests
         run: pip install requests
@@ -83,52 +83,141 @@ jobs:
           import requests
           from collections import Counter, defaultdict
 
-          files = [
+          FILES = [
               ("COMPARE", "compare.json"),
-              ("UPDATE", "update.json"),
+              ("UPDATELOTMIX", "update.json"),
               ("LOTMIX", "lotmix.json"),
-              ("CLAUDE", "claude.json")
+              ("CLAUDE-LOTMIX", "claude.json")
           ]
+
+          def normalize_num(x):
+              return str(x).strip().zfill(2)
+
+          def safe_load(path):
+              try:
+                  with open(path, "r", encoding="utf-8") as f:
+                      txt = f.read().strip()
+
+                  if not txt:
+                      print(f"⚠️ {path} vacío")
+                      return {}
+
+                  if txt.startswith("<"):
+                      print(f"⚠️ {path} devolvió HTML, no JSON")
+                      return {}
+
+                  return json.loads(txt)
+
+              except Exception as e:
+                  print(f"❌ Error leyendo {path}: {e}")
+                  return {}
+
+          def extract_numbers(data):
+              """
+              Soporta formatos:
+              1) {"top3": [...], "top12": [...]}
+              2) {"best_play": {"topq": [...], "top12": [...]}}
+              3) {"best_play": {"top3": [...], "top12": [...]}}
+              """
+
+              top3 = []
+              top12 = []
+
+              if isinstance(data, dict):
+                  top3 = data.get("top3", []) or data.get("topq", [])
+                  top12 = data.get("top12", [])
+
+                  best_play = data.get("best_play", {})
+                  if isinstance(best_play, dict):
+                      top3 = best_play.get("top3", []) or best_play.get("topq", []) or top3
+                      top12 = best_play.get("top12", []) or top12
+
+              top3 = [normalize_num(n) for n in top3]
+              top12 = [normalize_num(n) for n in top12]
+
+              return top3, top12
 
           numbers = []
           sources = defaultdict(list)
+          system_details = []
 
-          for name, f in files:
-              data = json.load(open(f))
-              nums = set(data.get("top3", []) + data.get("top12", []))
-              numbers.extend(nums)
-              for n in nums:
-                  sources[n].append(name)
+          for system_name, file_path in FILES:
+              data = safe_load(file_path)
+              top3, top12 = extract_numbers(data)
+
+              all_nums = list(dict.fromkeys(top3 + top12))
+
+              system_details.append({
+                  "system": system_name,
+                  "top3": top3,
+                  "top12": top12
+              })
+
+              for n in all_nums:
+                  numbers.append(n)
+                  sources[n].append(system_name)
 
           counts = Counter(numbers)
-          THRESHOLD = 2
 
           signals = []
           for n, c in counts.items():
-              if c >= THRESHOLD:
+              if c >= 2:
                   signals.append((n, c, sources[n]))
 
-          signals = sorted(signals, key=lambda x: x[1], reverse=True)
+          signals.sort(key=lambda x: (-x[1], x[0]))
 
           if signals:
               msg = "🔥 SUPER SIGNALS — LOTMIX META ENGINE 🔥\n\n"
+
               for n, c, systems in signals:
-                  strength = "🔥 AGRESIVO" if c >= 3 else "✅ JUGAR"
-                  msg += f"🎯 {n} → {c} sistemas\n"
-                  msg += f"📡 {', '.join(systems)}\n"
-                  msg += f"⚡ Decisión: {strength}\n\n"
+                  if c >= 4:
+                      decision = "🚀 JUGAR AGRESIVO — 4 SISTEMAS"
+                  elif c == 3:
+                      decision = "🔥 JUGAR FUERTE — 3 SISTEMAS"
+                  else:
+                      decision = "✅ JUGAR — 2 SISTEMAS"
+
+                  msg += f"🎯 Número: {n}\n"
+                  msg += f"📡 Coincidencia: {c} sistemas\n"
+                  msg += f"🧠 Sistemas: {', '.join(systems)}\n"
+                  msg += f"⚡ Decisión: {decision}\n\n"
+
+              msg += "━━━━━━━━━━━━━━\n"
+              msg += "📊 RESUMEN POR SISTEMA\n\n"
+
+              for item in system_details:
+                  msg += f"🔹 {item['system']}\n"
+                  msg += f"Top3: {', '.join(item['top3']) if item['top3'] else 'N/A'}\n"
+                  msg += f"Top12: {', '.join(item['top12'][:12]) if item['top12'] else 'N/A'}\n\n"
+
           else:
-              msg = "❌ NO JUGAR — SIN SUPER SIGNAL\n\nNo hay coincidencia fuerte entre sistemas."
+              msg = "❌ NO JUGAR — SIN SUPER SIGNAL\n\n"
+              msg += "No hay coincidencia mínima de 2 sistemas.\n\n"
+              msg += "📊 RESUMEN POR SISTEMA\n\n"
 
-          token = os.environ["TELEGRAM_BOT_TOKEN2"]
-          chat_id = os.environ["TELEGRAM_CHAT_ID2"]
+              for item in system_details:
+                  msg += f"🔹 {item['system']}\n"
+                  msg += f"Top3: {', '.join(item['top3']) if item['top3'] else 'N/A'}\n"
+                  msg += f"Top12: {', '.join(item['top12'][:12]) if item['top12'] else 'N/A'}\n\n"
 
-          url = f"https://api.telegram.org/bot{token}/sendMessage"
+          token = os.environ.get("TELEGRAM_BOT_TOKEN2")
+          chat_id = os.environ.get("TELEGRAM_CHAT_ID2")
 
-          requests.post(url, data={
-              "chat_id": chat_id,
-              "text": msg
-          })
+          if not token or not chat_id:
+              print("❌ Faltan TELEGRAM_BOT_TOKEN2 o TELEGRAM_CHAT_ID2")
+              print(msg)
+              raise SystemExit(1)
+
+          response = requests.post(
+              f"https://api.telegram.org/bot{token}/sendMessage",
+              data={
+                  "chat_id": chat_id,
+                  "text": msg
+              },
+              timeout=20
+          )
 
           print(msg)
+          print("Telegram status:", response.status_code)
+          print(response.text)
           EOF
