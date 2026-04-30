@@ -4,12 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
-
   trigger-systems:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Trigger LotMix
         run: |
           curl -X POST \
@@ -55,57 +53,82 @@ jobs:
     needs: wait-for-results
 
     steps:
-
       - name: Download COMPARE picks
         run: |
-          curl -o compare.json \
-          https://raw.githubusercontent.com/carbosota1/COMPARE/main/outputs/picks.json
+          curl -o compare.json https://raw.githubusercontent.com/carbosota1/COMPARE/main/outputs/picks.json
 
       - name: Download UPDATELOTMIX picks
         run: |
-          curl -o update.json \
-          https://raw.githubusercontent.com/carbosota1/UPDATELOTMIX/main/outputs/picks.json
+          curl -o update.json https://raw.githubusercontent.com/carbosota1/UPDATELOTMIX/main/outputs/picks.json
 
       - name: Download LOTMIX picks
         run: |
-          curl -o lotmix.json \
-          https://raw.githubusercontent.com/carbosota1/LOTMIX/main/outputs/picks.json
+          curl -o lotmix.json https://raw.githubusercontent.com/carbosota1/LOTMIX/main/outputs/picks.json
 
       - name: Download CLAUDE-LOTMIX picks
         run: |
-          curl -o claude.json \
-          https://raw.githubusercontent.com/carbosota1/CLAUDE-LOTMIX/main/outputs/picks.json
+          curl -o claude.json https://raw.githubusercontent.com/carbosota1/CLAUDE-LOTMIX/main/outputs/picks.json
 
-      - name: Run Cross Analyzer
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run Cross Analyzer + Telegram
+        env:
+          TELEGRAM_BOT_TOKEN2: ${{ secrets.TELEGRAM_BOT_TOKEN2 }}
+          TELEGRAM_CHAT_ID2: ${{ secrets.TELEGRAM_CHAT_ID2 }}
         run: |
-          python <<EOF
-import json
-from collections import Counter, defaultdict
+          python <<'EOF'
+          import json
+          import os
+          import requests
+          from collections import Counter, defaultdict
 
-files = [
-    ("COMPARE","compare.json"),
-    ("UPDATE","update.json"),
-    ("LOTMIX","lotmix.json"),
-    ("CLAUDE","claude.json")
-]
+          files = [
+              ("COMPARE", "compare.json"),
+              ("UPDATE", "update.json"),
+              ("LOTMIX", "lotmix.json"),
+              ("CLAUDE", "claude.json")
+          ]
 
-numbers = []
-sources = defaultdict(list)
+          numbers = []
+          sources = defaultdict(list)
 
-for name, f in files:
-    data = json.load(open(f))
-    nums = set(data["top3"] + data["top12"])
-    numbers.extend(nums)
-    for n in nums:
-        sources[n].append(name)
+          for name, f in files:
+              data = json.load(open(f))
+              nums = set(data.get("top3", []) + data.get("top12", []))
+              numbers.extend(nums)
+              for n in nums:
+                  sources[n].append(name)
 
-counts = Counter(numbers)
+          counts = Counter(numbers)
+          THRESHOLD = 2
 
-THRESHOLD = 2
+          signals = []
+          for n, c in counts.items():
+              if c >= THRESHOLD:
+                  signals.append((n, c, sources[n]))
 
-print("🔥 SUPER SIGNALS 🔥\n")
+          signals = sorted(signals, key=lambda x: x[1], reverse=True)
 
-for n, c in counts.items():
-    if c >= THRESHOLD:
-        print(f"{n} → {sources[n]}")
-EOF
+          if signals:
+              msg = "🔥 SUPER SIGNALS — LOTMIX META ENGINE 🔥\n\n"
+              for n, c, systems in signals:
+                  strength = "🔥 AGRESIVO" if c >= 3 else "✅ JUGAR"
+                  msg += f"🎯 {n} → {c} sistemas\n"
+                  msg += f"📡 {', '.join(systems)}\n"
+                  msg += f"⚡ Decisión: {strength}\n\n"
+          else:
+              msg = "❌ NO JUGAR — SIN SUPER SIGNAL\n\nNo hay coincidencia fuerte entre sistemas."
+
+          token = os.environ["TELEGRAM_BOT_TOKEN2"]
+          chat_id = os.environ["TELEGRAM_CHAT_ID2"]
+
+          url = f"https://api.telegram.org/bot{token}/sendMessage"
+
+          requests.post(url, data={
+              "chat_id": chat_id,
+              "text": msg
+          })
+
+          print(msg)
+          EOF
