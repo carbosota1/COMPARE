@@ -1,106 +1,55 @@
 {
-  "generated_at": "2026-05-07T19:15:08.827804-04:00",
-  "event_key": "2026-05-07|TEST|NO-UPDATE",
+  "generated_at": "2026-05-08T12:48:10.166913-04:00",
+  "event_key": "2026-05-08|La Suerte|Quiniela La Suerte",
   "items": [
     {
-      "generated_at": "2026-05-07T19:15:02.452491-04:00",
-      "event_key": "2026-05-07|TEST|NO-UPDATE",
+      "generated_at": "2026-05-08T12:48:09.116270-04:00",
+      "event_key": "2026-05-08|La Suerte|Quiniela La Suerte",
       "target": {
-        "time_rd": "2026-05-07 21:00",
+        "time_rd": "2026-05-08 13:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 9PM"
+        "draw": "Anguila 1PM"
       },
       "best_play": {
-        "time_rd": "2026-05-07 21:00",
+        "time_rd": "2026-05-08 13:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 9PM",
+        "draw": "Anguila 1PM",
         "top12": [
-          "20",
-          "25",
-          "63",
-          "76",
-          "48",
+          "50",
           "55",
-          "05",
-          "18",
+          "24",
+          "77",
+          "65",
+          "94",
+          "60",
+          "82",
+          "89",
+          "33",
           "83",
-          "34",
-          "02",
-          "15"
+          "57"
         ],
         "topq": [
-          "20",
-          "25",
-          "63"
+          "50",
+          "55",
+          "24"
         ],
         "pales": [
-          "20-25",
-          "20-63",
-          "20-76"
+          "50-55",
+          "24-50",
+          "50-77"
         ],
-        "fingerprint": "6114face5cf5e9fe",
+        "fingerprint": "9c1f5a1df60ec671",
         "ok_alert": false,
-        "best_signal": 0.0016187743242596561,
-        "best_a11": 7,
+        "best_signal": 0.0023746774719696495,
+        "best_a11": 5,
         "debug": {
-          "best_signal_hist": 0.0016187743242596561,
-          "best_a11_hist": 7,
+          "best_signal_hist": 0.0023746774719696495,
+          "best_a11_hist": 5,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 19,
-          "source_pairs_today": 8,
-          "source_rows_hist_used": 5327
-        }
-      }
-    },
-    {
-      "generated_at": "2026-05-07T19:15:08.378445-04:00",
-      "event_key": "2026-05-07|TEST|NO-UPDATE",
-      "target": {
-        "time_rd": "2026-05-07 21:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche"
-      },
-      "best_play": {
-        "time_rd": "2026-05-07 21:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche",
-        "top12": [
-          "49",
-          "03",
-          "35",
-          "84",
-          "61",
-          "11",
-          "90",
-          "80",
-          "13",
-          "38",
-          "07",
-          "81"
-        ],
-        "topq": [
-          "49",
-          "03",
-          "35"
-        ],
-        "pales": [
-          "03-49",
-          "35-49",
-          "49-84"
-        ],
-        "fingerprint": "0b2b2daff4e3efd4",
-        "ok_alert": false,
-        "best_signal": 0.001698704404353691,
-        "best_a11": 13,
-        "debug": {
-          "best_signal_hist": 0.001698704404353691,
-          "best_a11_hist": 13,
-          "has_intraday_sources": 0,
-          "intraday_events": 0,
-          "today_observed_nums": 19,
-          "source_pairs_today": 8,
-          "source_rows_hist_used": 5327
+          "today_observed_nums": 8,
+          "source_pairs_today": 3,
+          "source_rows_hist_used": 793
         }
       }
     }
