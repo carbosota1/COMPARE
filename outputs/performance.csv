@@ -660,3 +660,5 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-05-09|La Nacional|Loteria Nacional- Gana Más|2026-05-09 14:30,2026-05-09,2026-05-09 14:30,La Nacional,Loteria Nacional- Gana Más,73-51-86,0.0021618064064546174,5,False,0,0,0,1419.0
 2026-05-09|Anguilla|Anguila 6PM|2026-05-09 18:00,2026-05-09,2026-05-09 18:00,Anguilla,Anguila 6PM,33-55-10,0.0059689458654941865,11,False,1,1,0,2593.0
 2026-05-09|La Suerte|Quiniela La Suerte 6PM|2026-05-09 18:00,2026-05-09,2026-05-09 18:00,La Suerte,Quiniela La Suerte 6PM,72-58-78,0.001119364335334741,9,False,0,0,0,2593.0
+2026-05-09|Anguilla|Anguila 9PM|2026-05-09 21:00,2026-05-09,2026-05-09 21:00,Anguilla,Anguila 9PM,39-20-15,0.002090848433889591,12,False,0,0,0,5855.0
+2026-05-09|La Nacional|Loteria Nacional- Noche|2026-05-09 21:00,2026-05-09,2026-05-09 21:00,La Nacional,Loteria Nacional- Noche,84-37-17,0.0014738840291999159,13,False,1,2,0,5855.0
