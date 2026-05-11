@@ -1,157 +1,55 @@
 {
-  "generated_at": "2026-05-10T16:31:33.519831-04:00",
-  "event_key": "2026-05-10|La Nacional|Loteria Nacional- Gana Más",
+  "generated_at": "2026-05-11T12:49:12.677975-04:00",
+  "event_key": "2026-05-11|La Suerte|Quiniela La Suerte",
   "items": [
     {
-      "generated_at": "2026-05-10T16:31:24.579095-04:00",
-      "event_key": "2026-05-10|La Nacional|Loteria Nacional- Gana Más",
+      "generated_at": "2026-05-11T12:49:12.164029-04:00",
+      "event_key": "2026-05-11|La Suerte|Quiniela La Suerte",
       "target": {
-        "time_rd": "2026-05-10 18:00",
+        "time_rd": "2026-05-11 13:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 6PM"
+        "draw": "Anguila 1PM"
       },
       "best_play": {
-        "time_rd": "2026-05-10 18:00",
+        "time_rd": "2026-05-11 13:00",
         "lottery": "Anguilla",
-        "draw": "Anguila 6PM",
+        "draw": "Anguila 1PM",
         "top12": [
-          "90",
-          "28",
+          "58",
+          "84",
           "46",
-          "88",
-          "70",
-          "03",
-          "63",
-          "66",
-          "75",
-          "48",
-          "59",
-          "45"
+          "83",
+          "77",
+          "65",
+          "94",
+          "60",
+          "33",
+          "89",
+          "82",
+          "57"
         ],
         "topq": [
-          "90",
-          "28",
+          "58",
+          "84",
           "46"
         ],
         "pales": [
-          "28-90",
-          "46-90",
-          "88-90"
+          "58-84",
+          "46-58",
+          "58-83"
         ],
-        "fingerprint": "14928047b8ec4bfc",
+        "fingerprint": "29dd067e93ff7311",
         "ok_alert": false,
-        "best_signal": 0.0020403526509177707,
-        "best_a11": 7,
+        "best_signal": 0.0054974791094882505,
+        "best_a11": 4,
         "debug": {
-          "best_signal_hist": 0.0020403526509177707,
-          "best_a11_hist": 7,
+          "best_signal_hist": 0.0054974791094882505,
+          "best_a11_hist": 4,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 15,
-          "source_pairs_today": 5,
-          "source_rows_hist_used": 2775
-        }
-      }
-    },
-    {
-      "generated_at": "2026-05-10T16:31:28.831310-04:00",
-      "event_key": "2026-05-10|La Nacional|Loteria Nacional- Gana Más",
-      "target": {
-        "time_rd": "2026-05-10 18:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche"
-      },
-      "best_play": {
-        "time_rd": "2026-05-10 18:00",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Noche",
-        "top12": [
-          "88",
-          "90",
-          "13",
-          "81",
-          "07",
-          "11",
-          "61",
-          "80",
-          "84",
-          "38",
-          "49",
-          "63"
-        ],
-        "topq": [
-          "88",
-          "90",
-          "13"
-        ],
-        "pales": [
-          "88-90",
-          "13-88",
-          "81-88"
-        ],
-        "fingerprint": "0afbb44cb9330def",
-        "ok_alert": false,
-        "best_signal": 0.00031389610422305426,
-        "best_a11": 7,
-        "debug": {
-          "best_signal_hist": 0.00031389610422305426,
-          "best_a11_hist": 7,
-          "has_intraday_sources": 0,
-          "intraday_events": 0,
-          "today_observed_nums": 15,
-          "source_pairs_today": 5,
-          "source_rows_hist_used": 2775
-        }
-      }
-    },
-    {
-      "generated_at": "2026-05-10T16:31:32.972608-04:00",
-      "event_key": "2026-05-10|La Nacional|Loteria Nacional- Gana Más",
-      "target": {
-        "time_rd": "2026-05-10 18:00",
-        "lottery": "La Suerte",
-        "draw": "Quiniela La Suerte 6PM"
-      },
-      "best_play": {
-        "time_rd": "2026-05-10 18:00",
-        "lottery": "La Suerte",
-        "draw": "Quiniela La Suerte 6PM",
-        "top12": [
-          "60",
-          "09",
-          "13",
-          "07",
-          "82",
-          "88",
-          "66",
-          "92",
-          "53",
-          "21",
-          "30",
-          "35"
-        ],
-        "topq": [
-          "60",
-          "09",
-          "13"
-        ],
-        "pales": [
-          "09-60",
-          "13-60",
-          "07-60"
-        ],
-        "fingerprint": "06516c837d9825f5",
-        "ok_alert": false,
-        "best_signal": 0.0022735821605386576,
-        "best_a11": 10,
-        "debug": {
-          "best_signal_hist": 0.0022735821605386576,
-          "best_a11_hist": 10,
-          "has_intraday_sources": 0,
-          "intraday_events": 0,
-          "today_observed_nums": 15,
-          "source_pairs_today": 5,
-          "source_rows_hist_used": 2775
+          "today_observed_nums": 9,
+          "source_pairs_today": 3,
+          "source_rows_hist_used": 876
         }
       }
     }
