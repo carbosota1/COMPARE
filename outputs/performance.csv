@@ -751,3 +751,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-05-25|Anguilla|Anguila 6PM|2026-05-25 18:00,2026-05-25,2026-05-25 18:00,Anguilla,Anguila 6PM,07-33-40,0.00042141661268659203,6,False,0,1,0,2381.0
 2026-05-25|La Suerte|Quiniela La Suerte 6PM|2026-05-25 18:00,2026-05-25,2026-05-25 18:00,La Suerte,Quiniela La Suerte 6PM,86-35-73,0.0016294609343552107,10,False,0,2,0,2381.0
 2026-05-25|La Primera|Quiniela La Primera Noche|2026-05-25 19:00,2026-05-25,2026-05-25 19:00,La Primera,Quiniela La Primera Noche,99-25-18,0.00232883775765616,11,False,0,2,0,4690.0
+2026-05-30|La Primera|Quiniela La Primera|2026-05-30 12:00,2026-05-30,2026-05-30 12:00,La Primera,Quiniela La Primera,76-85-77,0.004854370977901805,1,False,0,0,0,85.0
