@@ -1,0 +1,38 @@
+{
+  "generado_en": "2026-06-03T11:33:42",
+  "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
+  "signal_median": 0.003,
+  "total_loterias": 1,
+  "skipped": [],
+  "loterias": {
+    "Quiniela La Primera": {
+      "draw": "Quiniela La Primera",
+      "lottery": "La Primera",
+      "date": "2026-06-03",
+      "numeros": [
+        "83",
+        "90",
+        "64",
+        "66",
+        "14",
+        "10"
+      ],
+      "posiciones_usadas": [
+        8,
+        11,
+        7,
+        1,
+        9,
+        6
+      ],
+      "n_numeros": 6,
+      "bonus_signal": true,
+      "signal": 0.025109,
+      "a11": 2,
+      "ok_alert": false,
+      "hit_rate_historico": 26.2,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
+    }
+  }
+}
