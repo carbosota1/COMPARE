@@ -1,36 +1,38 @@
 {
-  "generado_en": "2026-06-03T13:19:05",
+  "generado_en": "2026-06-04T11:33:52",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Loteria Nacional- Gana Más": {
-      "draw": "Loteria Nacional- Gana Más",
-      "lottery": "La Nacional",
-      "date": "2026-06-03",
+    "Quiniela La Primera": {
+      "draw": "Quiniela La Primera",
+      "lottery": "La Primera",
+      "date": "2026-06-04",
       "numeros": [
-        "20",
-        "89",
+        "97",
+        "90",
+        "83",
         "64",
-        "21",
-        "14"
+        "96",
+        "10"
       ],
       "posiciones_usadas": [
-        4,
-        6,
-        5,
+        8,
+        11,
+        7,
         1,
-        11
+        9,
+        6
       ],
-      "n_numeros": 5,
-      "bonus_signal": false,
-      "signal": 0.000539,
-      "a11": 6,
+      "n_numeros": 6,
+      "bonus_signal": true,
+      "signal": 0.067176,
+      "a11": 4,
       "ok_alert": false,
-      "hit_rate_historico": 31.4,
-      "calidad_draw": "normal",
-      "advertencia": null
+      "hit_rate_historico": 26.2,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
     }
   }
 }
