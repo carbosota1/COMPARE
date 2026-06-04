@@ -1,37 +1,37 @@
 {
-  "generado_en": "2026-06-04T12:18:35",
+  "generado_en": "2026-06-04T12:43:47",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Quiniela La Suerte": {
-      "draw": "Quiniela La Suerte",
-      "lottery": "La Suerte",
+    "Anguila 1PM": {
+      "draw": "Anguila 1PM",
+      "lottery": "Anguilla",
       "date": "2026-06-04",
       "numeros": [
-        "42",
-        "38",
-        "71",
-        "88",
         "65",
-        "60"
+        "81",
+        "88",
+        "83",
+        "54",
+        "77"
       ],
       "posiciones_usadas": [
-        12,
-        10,
-        9,
+        7,
+        11,
         2,
-        8,
+        12,
+        3,
         6
       ],
       "n_numeros": 6,
       "bonus_signal": true,
-      "signal": 0.008944,
-      "a11": 5,
+      "signal": 0.007743,
+      "a11": 7,
       "ok_alert": false,
-      "hit_rate_historico": 27.5,
-      "calidad_draw": "debil",
+      "hit_rate_historico": 31.7,
+      "calidad_draw": "normal",
       "advertencia": null
     }
   }
