@@ -1,55 +1,106 @@
 {
-  "generated_at": "2026-06-04T18:19:32.579042-04:00",
-  "event_key": "2026-06-04|La Suerte|Quiniela La Suerte 6PM",
+  "generated_at": "2026-06-04T19:19:43.369936-04:00",
+  "event_key": "2026-06-04|La Primera|Quiniela La Primera Noche",
   "items": [
     {
-      "generated_at": "2026-06-04T18:19:23.717273-04:00",
-      "event_key": "2026-06-04|La Suerte|Quiniela La Suerte 6PM",
+      "generated_at": "2026-06-04T19:19:19.757187-04:00",
+      "event_key": "2026-06-04|La Primera|Quiniela La Primera Noche",
       "target": {
-        "time_rd": "2026-06-04 19:00",
-        "lottery": "La Primera",
-        "draw": "Quiniela La Primera Noche"
+        "time_rd": "2026-06-04 21:00",
+        "lottery": "Anguilla",
+        "draw": "Anguila 9PM"
       },
       "best_play": {
-        "time_rd": "2026-06-04 19:00",
-        "lottery": "La Primera",
-        "draw": "Quiniela La Primera Noche",
+        "time_rd": "2026-06-04 21:00",
+        "lottery": "Anguilla",
+        "draw": "Anguila 9PM",
         "top12": [
-          "33",
-          "88",
-          "08",
-          "09",
-          "54",
-          "41",
+          "55",
+          "63",
+          "76",
+          "48",
+          "34",
           "18",
-          "14",
-          "31",
-          "99",
-          "79",
-          "05"
+          "02",
+          "05",
+          "83",
+          "25",
+          "69",
+          "28"
         ],
         "topq": [
-          "33",
-          "88",
-          "08"
+          "55",
+          "63",
+          "76"
         ],
         "pales": [
-          "33-88",
-          "08-33",
-          "09-33"
+          "55-63",
+          "55-76",
+          "48-55"
         ],
-        "fingerprint": "e6d256412104feab",
+        "fingerprint": "b6a5b69d17ec52b5",
         "ok_alert": false,
-        "best_signal": 0.0024393767464841155,
-        "best_a11": 10,
+        "best_signal": 0.001895713886754418,
+        "best_a11": 3,
         "debug": {
-          "best_signal_hist": 0.0024393767464841155,
-          "best_a11_hist": 10,
+          "best_signal_hist": 0.001895713886754418,
+          "best_a11_hist": 3,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 20,
-          "source_pairs_today": 7,
-          "source_rows_hist_used": 4956
+          "today_observed_nums": 22,
+          "source_pairs_today": 8,
+          "source_rows_hist_used": 6270
+        }
+      }
+    },
+    {
+      "generated_at": "2026-06-04T19:19:42.626940-04:00",
+      "event_key": "2026-06-04|La Primera|Quiniela La Primera Noche",
+      "target": {
+        "time_rd": "2026-06-04 21:00",
+        "lottery": "La Nacional",
+        "draw": "Loteria Nacional- Noche"
+      },
+      "best_play": {
+        "time_rd": "2026-06-04 21:00",
+        "lottery": "La Nacional",
+        "draw": "Loteria Nacional- Noche",
+        "top12": [
+          "12",
+          "49",
+          "91",
+          "95",
+          "64",
+          "13",
+          "84",
+          "11",
+          "61",
+          "90",
+          "80",
+          "38"
+        ],
+        "topq": [
+          "12",
+          "49",
+          "91"
+        ],
+        "pales": [
+          "12-49",
+          "12-91",
+          "12-95"
+        ],
+        "fingerprint": "b715dd76823d32b8",
+        "ok_alert": false,
+        "best_signal": 0.0042410498196620945,
+        "best_a11": 13,
+        "debug": {
+          "best_signal_hist": 0.0042410498196620945,
+          "best_a11_hist": 13,
+          "has_intraday_sources": 0,
+          "intraday_events": 0,
+          "today_observed_nums": 22,
+          "source_pairs_today": 8,
+          "source_rows_hist_used": 6270
         }
       }
     }
