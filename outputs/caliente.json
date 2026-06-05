@@ -1,35 +1,64 @@
 {
-  "generado_en": "2026-06-05T13:18:55",
+  "generado_en": "2026-06-05T16:14:23",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
-  "total_loterias": 1,
+  "total_loterias": 2,
   "skipped": [],
   "loterias": {
-    "Loteria Nacional- Gana Más": {
-      "draw": "Loteria Nacional- Gana Más",
-      "lottery": "La Nacional",
+    "Anguila 6PM": {
+      "draw": "Anguila 6PM",
+      "lottery": "Anguilla",
       "date": "2026-06-05",
       "numeros": [
+        "70",
         "42",
-        "20",
-        "40",
-        "48",
-        "95"
+        "66",
+        "59",
+        "03",
+        "75"
       ],
       "posiciones_usadas": [
-        4,
-        6,
-        5,
+        2,
         1,
+        7,
+        12,
+        5,
         11
+      ],
+      "n_numeros": 6,
+      "bonus_signal": true,
+      "signal": 0.004456,
+      "a11": 5,
+      "ok_alert": false,
+      "hit_rate_historico": 33.8,
+      "calidad_draw": "fuerte",
+      "advertencia": null
+    },
+    "Quiniela La Suerte 6PM": {
+      "draw": "Quiniela La Suerte 6PM",
+      "lottery": "La Suerte",
+      "date": "2026-06-05",
+      "numeros": [
+        "35",
+        "21",
+        "66",
+        "30",
+        "53"
+      ],
+      "posiciones_usadas": [
+        12,
+        7,
+        4,
+        9,
+        6
       ],
       "n_numeros": 5,
       "bonus_signal": false,
-      "signal": 0.00111,
-      "a11": 8,
+      "signal": 0.002763,
+      "a11": 10,
       "ok_alert": false,
-      "hit_rate_historico": 31.4,
-      "calidad_draw": "normal",
+      "hit_rate_historico": 33.8,
+      "calidad_draw": "fuerte",
       "advertencia": null
     }
   }
