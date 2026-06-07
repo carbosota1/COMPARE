@@ -1,37 +1,89 @@
 {
-  "generado_en": "2026-06-07T13:18:51",
+  "generado_en": "2026-06-07T16:14:30",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
-  "total_loterias": 1,
+  "total_loterias": 3,
   "skipped": [],
   "loterias": {
-    "Loteria Nacional- Gana Más": {
-      "draw": "Loteria Nacional- Gana Más",
+    "Anguila 6PM": {
+      "draw": "Anguila 6PM",
+      "lottery": "Anguilla",
+      "date": "2026-06-07",
+      "numeros": [
+        "43",
+        "34",
+        "33",
+        "75",
+        "63"
+      ],
+      "posiciones_usadas": [
+        2,
+        1,
+        7,
+        12,
+        5
+      ],
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.001802,
+      "a11": 7,
+      "ok_alert": false,
+      "hit_rate_historico": 33.8,
+      "calidad_draw": "fuerte",
+      "advertencia": null
+    },
+    "Loteria Nacional- Noche": {
+      "draw": "Loteria Nacional- Noche",
       "lottery": "La Nacional",
       "date": "2026-06-07",
       "numeros": [
-        "40",
-        "64",
-        "20",
-        "30",
-        "13",
-        "95"
+        "84",
+        "43",
+        "07",
+        "38",
+        "80"
       ],
       "posiciones_usadas": [
-        4,
-        6,
-        5,
-        1,
+        8,
+        3,
         11,
-        12
+        10,
+        6
       ],
-      "n_numeros": 6,
-      "bonus_signal": true,
-      "signal": 0.003219,
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.001652,
       "a11": 8,
       "ok_alert": false,
-      "hit_rate_historico": 31.4,
-      "calidad_draw": "normal",
+      "hit_rate_historico": 26.5,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
+    },
+    "Quiniela La Suerte 6PM": {
+      "draw": "Quiniela La Suerte 6PM",
+      "lottery": "La Suerte",
+      "date": "2026-06-07",
+      "numeros": [
+        "07",
+        "66",
+        "73",
+        "21",
+        "92"
+      ],
+      "posiciones_usadas": [
+        12,
+        7,
+        4,
+        9,
+        6
+      ],
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.001718,
+      "a11": 10,
+      "ok_alert": false,
+      "hit_rate_historico": 33.8,
+      "calidad_draw": "fuerte",
       "advertencia": null
     }
   }
