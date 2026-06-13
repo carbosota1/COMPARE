@@ -867,3 +867,6 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-06-12|La Nacional|Loteria Nacional- Gana Más|2026-06-12 14:30,2026-06-12,2026-06-12 14:30,La Nacional,Loteria Nacional- Gana Más,25-20-35,0.0016429884833879884,3,False,0,1,0,995.0
 2026-06-12|La Suerte|Quiniela La Suerte 6PM|2026-06-12 18:00,2026-06-12,2026-06-12 18:00,La Suerte,Quiniela La Suerte 6PM,60-11-98,0.002806293278625033,7,False,0,0,0,2546.0
 2026-06-12|La Primera|Quiniela La Primera Noche|2026-06-12 19:00,2026-06-12,2026-06-12 19:00,La Primera,Quiniela La Primera Noche,73-47-09,0.0015081411629162221,11,False,0,0,0,4212.0
+2026-06-12|Anguilla|Anguila 6PM|2026-06-12 18:00,2026-06-12,2026-06-12 18:00,Anguilla,Anguila 6PM,65-26-72,5.319011114281298e-06,4,False,0,1,0,2546.0
+2026-06-12|Anguilla|Anguila 9PM|2026-06-12 21:00,2026-06-12,2026-06-12 21:00,Anguilla,Anguila 9PM,97-38-97,0.003471348919620536,8,False,0,0,0,5696.0
+2026-06-12|La Nacional|Loteria Nacional- Noche|2026-06-12 21:00,2026-06-12,2026-06-12 21:00,La Nacional,Loteria Nacional- Noche,94-45-42,0.0011442489387034026,11,False,0,0,0,5696.0
