@@ -1,38 +1,36 @@
 {
-  "generado_en": "2026-06-13T11:33:38",
+  "generado_en": "2026-06-13T12:18:48",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Quiniela La Primera": {
-      "draw": "Quiniela La Primera",
-      "lottery": "La Primera",
+    "Quiniela La Suerte": {
+      "draw": "Quiniela La Suerte",
+      "lottery": "La Suerte",
       "date": "2026-06-13",
       "numeros": [
-        "14",
-        "96",
-        "64",
-        "92",
-        "83",
-        "10"
+        "42",
+        "33",
+        "65",
+        "36",
+        "38"
       ],
       "posiciones_usadas": [
-        8,
-        11,
-        7,
-        1,
+        12,
+        10,
         9,
-        6
+        2,
+        8
       ],
-      "n_numeros": 6,
-      "bonus_signal": true,
-      "signal": 0.008841,
-      "a11": 1,
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.002933,
+      "a11": 5,
       "ok_alert": false,
-      "hit_rate_historico": 26.2,
+      "hit_rate_historico": 27.5,
       "calidad_draw": "debil",
-      "advertencia": "draw con HR bajo (<28%)"
+      "advertencia": null
     }
   }
 }
