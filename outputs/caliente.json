@@ -1,37 +1,37 @@
 {
-  "generado_en": "2026-06-24T12:19:18",
+  "generado_en": "2026-06-24T13:20:31",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Quiniela La Suerte": {
-      "draw": "Quiniela La Suerte",
-      "lottery": "La Suerte",
+    "Loteria Nacional- Gana Más": {
+      "draw": "Loteria Nacional- Gana Más",
+      "lottery": "La Nacional",
       "date": "2026-06-24",
       "numeros": [
-        "33",
-        "63",
-        "65",
         "51",
-        "99",
-        "60"
+        "20",
+        "40",
+        "88",
+        "41",
+        "13"
       ],
       "posiciones_usadas": [
-        12,
-        10,
-        9,
-        2,
-        8,
-        6
+        4,
+        6,
+        5,
+        1,
+        11,
+        12
       ],
       "n_numeros": 6,
       "bonus_signal": true,
-      "signal": 0.007696,
-      "a11": 3,
+      "signal": 0.004151,
+      "a11": 7,
       "ok_alert": false,
-      "hit_rate_historico": 27.5,
-      "calidad_draw": "debil",
+      "hit_rate_historico": 31.4,
+      "calidad_draw": "normal",
       "advertencia": null
     }
   }
