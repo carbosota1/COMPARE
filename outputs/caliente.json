@@ -1,64 +1,35 @@
 {
-  "generado_en": "2026-06-29T16:13:40",
+  "generado_en": "2026-06-29T18:19:02",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
-  "total_loterias": 2,
+  "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Anguila 6PM": {
-      "draw": "Anguila 6PM",
-      "lottery": "Anguilla",
+    "Quiniela La Primera Noche": {
+      "draw": "Quiniela La Primera Noche",
+      "lottery": "La Primera",
       "date": "2026-06-29",
       "numeros": [
-        "33",
-        "42",
-        "66",
+        "41",
+        "31",
         "54",
-        "70",
-        "75"
+        "05",
+        "65"
       ],
       "posiciones_usadas": [
-        2,
-        1,
-        7,
-        12,
         5,
-        11
-      ],
-      "n_numeros": 6,
-      "bonus_signal": true,
-      "signal": 0.005459,
-      "a11": 12,
-      "ok_alert": false,
-      "hit_rate_historico": 33.8,
-      "calidad_draw": "fuerte",
-      "advertencia": null
-    },
-    "Quiniela La Suerte 6PM": {
-      "draw": "Quiniela La Suerte 6PM",
-      "lottery": "La Suerte",
-      "date": "2026-06-29",
-      "numeros": [
-        "02",
-        "35",
-        "73",
-        "88",
-        "07"
-      ],
-      "posiciones_usadas": [
+        10,
         12,
-        7,
-        4,
-        9,
-        6
+        11,
+        3
       ],
       "n_numeros": 5,
       "bonus_signal": false,
-      "signal": 6.2e-05,
-      "a11": 7,
+      "signal": 0.002187,
+      "a11": 12,
       "ok_alert": false,
-      "hit_rate_historico": 33.8,
-      "calidad_draw": "fuerte",
+      "hit_rate_historico": 27.7,
+      "calidad_draw": "debil",
       "advertencia": null
     }
   }
