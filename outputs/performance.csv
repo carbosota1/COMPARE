@@ -1038,3 +1038,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-07-01|La Nacional|Loteria Nacional- Noche|2026-07-01 21:00,2026-07-01,2026-07-01 21:00,La Nacional,Loteria Nacional- Noche,23-34-82,0.001465744429043618,14,True,0,0,0,6708.0
 2026-07-02|La Primera|Quiniela La Primera|2026-07-02 12:00,2026-07-02,2026-07-02 12:00,La Primera,Quiniela La Primera,13-52-72,0.01359156738583881,1,True,0,0,0,73.0
 2026-07-02|La Suerte|Quiniela La Suerte|2026-07-02 12:30,2026-07-02,2026-07-02 12:30,La Suerte,Quiniela La Suerte,17-70-17,0.005233026762557179,3,False,0,0,0,399.0
+2026-07-02|Anguilla|Anguila 1PM|2026-07-02 13:00,2026-07-02,2026-07-02 13:00,Anguilla,Anguila 1PM,41-29-08,0.003655752785561842,0,False,0,0,0,853.0
