@@ -1,36 +1,38 @@
 {
-  "generado_en": "2026-07-05T19:19:50",
+  "generado_en": "2026-07-06T10:34:44",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Anguila 9PM": {
-      "draw": "Anguila 9PM",
-      "lottery": "Anguilla",
-      "date": "2026-07-05",
+    "Quiniela La Primera": {
+      "draw": "Quiniela La Primera",
+      "lottery": "La Primera",
+      "date": "2026-07-06",
       "numeros": [
-        "18",
-        "25",
-        "48",
-        "20",
-        "28"
+        "56",
+        "85",
+        "96",
+        "64",
+        "80",
+        "83"
       ],
       "posiciones_usadas": [
-        3,
         8,
-        6,
-        10,
-        9
+        11,
+        7,
+        1,
+        9,
+        6
       ],
-      "n_numeros": 5,
-      "bonus_signal": false,
-      "signal": 0.002144,
-      "a11": 13,
+      "n_numeros": 6,
+      "bonus_signal": true,
+      "signal": 0.00305,
+      "a11": 4,
       "ok_alert": false,
-      "hit_rate_historico": 31.2,
-      "calidad_draw": "normal",
-      "advertencia": null
+      "hit_rate_historico": 26.2,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
     }
   }
 }
