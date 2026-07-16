@@ -1,36 +1,34 @@
 {
-  "generado_en": "2026-07-16T12:44:05",
+  "generado_en": "2026-07-16T13:19:04",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Anguila 1PM": {
-      "draw": "Anguila 1PM",
-      "lottery": "Anguilla",
+    "Loteria Nacional- Gana Más": {
+      "draw": "Loteria Nacional- Gana Más",
+      "lottery": "La Nacional",
       "date": "2026-07-16",
       "numeros": [
+        "20",
         "94",
-        "57",
-        "12",
-        "08",
-        "77",
-        "60"
+        "64",
+        "60",
+        "42"
       ],
       "posiciones_usadas": [
-        7,
-        11,
-        2,
-        12,
-        3,
-        6
+        4,
+        6,
+        5,
+        1,
+        11
       ],
-      "n_numeros": 6,
-      "bonus_signal": true,
-      "signal": 0.005031,
-      "a11": 6,
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.001574,
+      "a11": 5,
       "ok_alert": false,
-      "hit_rate_historico": 31.7,
+      "hit_rate_historico": 31.4,
       "calidad_draw": "normal",
       "advertencia": null
     }
