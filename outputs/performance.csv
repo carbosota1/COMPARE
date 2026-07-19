@@ -1193,3 +1193,6 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-07-19|La Suerte|Quiniela La Suerte|2026-07-19 12:30,2026-07-19,2026-07-19 12:30,La Suerte,Quiniela La Suerte,26-92-11,6.775823624694419e-07,2,False,0,0,0,362.0
 2026-07-19|Anguilla|Anguila 1PM|2026-07-19 13:00,2026-07-19,2026-07-19 13:00,Anguilla,Anguila 1PM,47-10-21,0.0016957213742151737,4,False,0,0,0,902.0
 2026-07-19|La Nacional|Loteria Nacional- Gana Más|2026-07-19 14:30,2026-07-19,2026-07-19 14:30,La Nacional,Loteria Nacional- Gana Más,24-45-87,0.0007345326115701453,5,False,0,0,0,1560.0
+2026-07-19|Anguilla|Anguila 6PM|2026-07-19 18:00,2026-07-19,2026-07-19 18:00,Anguilla,Anguila 6PM,56-44-82,0.005787884771747894,6,False,0,0,0,2690.0
+2026-07-19|La Nacional|Loteria Nacional- Noche|2026-07-19 18:00,2026-07-19,2026-07-19 18:00,La Nacional,Loteria Nacional- Noche,78-55-10,0.001528295937036187,9,False,0,0,0,2690.0
+2026-07-19|La Suerte|Quiniela La Suerte 6PM|2026-07-19 18:00,2026-07-19,2026-07-19 18:00,La Suerte,Quiniela La Suerte 6PM,89-47-62,0.001872122175238377,10,False,0,0,0,2690.0
