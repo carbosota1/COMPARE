@@ -1,38 +1,63 @@
 {
-  "generado_en": "2026-07-20T18:20:02",
+  "generado_en": "2026-07-20T19:20:25",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
-  "total_loterias": 1,
+  "total_loterias": 2,
   "skipped": [],
   "loterias": {
-    "Quiniela La Primera Noche": {
-      "draw": "Quiniela La Primera Noche",
-      "lottery": "La Primera",
+    "Anguila 9PM": {
+      "draw": "Anguila 9PM",
+      "lottery": "Anguilla",
       "date": "2026-07-20",
       "numeros": [
-        "14",
-        "99",
-        "65",
-        "05",
-        "42",
-        "15"
+        "15",
+        "34",
+        "76",
+        "06",
+        "18"
       ],
       "posiciones_usadas": [
-        5,
-        10,
-        12,
-        11,
         3,
-        4
+        8,
+        6,
+        10,
+        9
       ],
-      "n_numeros": 6,
-      "bonus_signal": true,
-      "signal": 0.004109,
-      "a11": 7,
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.001135,
+      "a11": 13,
       "ok_alert": false,
-      "hit_rate_historico": 27.7,
-      "calidad_draw": "debil",
+      "hit_rate_historico": 31.2,
+      "calidad_draw": "normal",
       "advertencia": null
+    },
+    "Loteria Nacional- Noche": {
+      "draw": "Loteria Nacional- Noche",
+      "lottery": "La Nacional",
+      "date": "2026-07-20",
+      "numeros": [
+        "61",
+        "95",
+        "38",
+        "84",
+        "90"
+      ],
+      "posiciones_usadas": [
+        8,
+        3,
+        11,
+        10,
+        6
+      ],
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.002085,
+      "a11": 14,
+      "ok_alert": true,
+      "hit_rate_historico": 26.5,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
     }
   }
 }
