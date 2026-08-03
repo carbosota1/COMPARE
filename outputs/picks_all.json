@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-08-03T10:34:18.364597-04:00",
-  "event_key": "2026-08-03|TEST|NO-UPDATE",
+  "generated_at": "2026-08-03T12:19:09.714317-04:00",
+  "event_key": "2026-08-03|La Primera|Quiniela La Primera",
   "items": [
     {
-      "generated_at": "2026-08-03T10:34:17.606657-04:00",
-      "event_key": "2026-08-03|TEST|NO-UPDATE",
+      "generated_at": "2026-08-03T12:19:08.955049-04:00",
+      "event_key": "2026-08-03|La Primera|Quiniela La Primera",
       "target": {
-        "time_rd": "2026-08-03 12:00",
-        "lottery": "La Primera",
-        "draw": "Quiniela La Primera"
+        "time_rd": "2026-08-03 12:30",
+        "lottery": "La Suerte",
+        "draw": "Quiniela La Suerte"
       },
       "best_play": {
-        "time_rd": "2026-08-03 12:00",
-        "lottery": "La Primera",
-        "draw": "Quiniela La Primera",
+        "time_rd": "2026-08-03 12:30",
+        "lottery": "La Suerte",
+        "draw": "Quiniela La Suerte",
         "top12": [
-          "10",
-          "64",
-          "23",
-          "76",
-          "14",
-          "83",
-          "24",
-          "96",
-          "56",
-          "16",
+          "00",
+          "18",
+          "60",
+          "07",
+          "63",
+          "99",
+          "38",
           "65",
-          "80"
+          "33",
+          "71",
+          "59",
+          "42"
         ],
         "topq": [
-          "10",
-          "64",
-          "23"
+          "00",
+          "18",
+          "60"
         ],
         "pales": [
-          "10-64",
-          "10-23",
-          "10-76"
+          "00-18",
+          "00-60",
+          "00-07"
         ],
-        "fingerprint": "06c42b8d71093935",
+        "fingerprint": "d823a45723abdb1d",
         "ok_alert": false,
-        "best_signal": 0.002848224633537916,
-        "best_a11": 4,
+        "best_signal": 0.0031799614571764024,
+        "best_a11": 0,
         "debug": {
-          "best_signal_hist": 0.002848224633537916,
-          "best_a11_hist": 4,
+          "best_signal_hist": 0.0031799614571764024,
+          "best_a11_hist": 0,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 0,
-          "source_pairs_today": 1,
-          "source_rows_hist_used": 2796
+          "today_observed_nums": 6,
+          "source_pairs_today": 2,
+          "source_rows_hist_used": 422
         }
       }
     }
