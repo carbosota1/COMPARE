@@ -1709,9 +1709,10 @@
     "2026-08-09|La Primera|Quiniela La Primera Noche": "done",
     "2026-08-09|Anguilla|Anguila 9PM": "done",
     "2026-08-10|Anguilla|Anguila 10AM": "done",
-    "2026-08-10|La Primera|Quiniela La Primera": "done"
+    "2026-08-10|La Primera|Quiniela La Primera": "done",
+    "2026-08-10|La Suerte|Quiniela La Suerte": "done"
   },
-  "last_event_key": "2026-08-10|La Primera|Quiniela La Primera",
+  "last_event_key": "2026-08-10|La Suerte|Quiniela La Suerte",
   "sent_by_target_fp": {
     "2026-02-19 12:00|La Primera|Quiniela La Primera": "b9eda51058778462",
     "2026-02-19 12:30|La Suerte|Quiniela La Suerte": "dbcbd970c5163e2d",
@@ -3087,7 +3088,8 @@
     "2026-08-09 19:00|La Primera|Quiniela La Primera Noche": "1dc7d6388280dce2",
     "2026-08-09 21:00|Anguilla|Anguila 9PM": "386e97d3e0b3b326",
     "2026-08-10 12:00|La Primera|Quiniela La Primera": "765b7e8f06d7a9a0",
-    "2026-08-10 12:30|La Suerte|Quiniela La Suerte": "1d51d8f1c8bebe10"
+    "2026-08-10 12:30|La Suerte|Quiniela La Suerte": "1d51d8f1c8bebe10",
+    "2026-08-10 13:00|Anguilla|Anguila 1PM": "5ef0918319c2c224"
   },
   "last_wait_key": ""
 }
