@@ -1413,3 +1413,5 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-08-14|Anguilla|Anguila 6PM|2026-08-14 18:00,2026-08-14,2026-08-14 18:00,Anguilla,Anguila 6PM,17-51-92,0.005559161052606449,6,False,0,0,0,2723.0
 2026-08-14|La Suerte|Quiniela La Suerte 6PM|2026-08-14 18:00,2026-08-14,2026-08-14 18:00,La Suerte,Quiniela La Suerte 6PM,69-08-77,0.0008434687467063978,10,False,0,0,0,2723.0
 2026-08-14|La Primera|Quiniela La Primera Noche|2026-08-14 19:00,2026-08-14,2026-08-14 19:00,La Primera,Quiniela La Primera Noche,09-31-21,0.002169343545394355,12,False,0,1,0,4955.0
+2026-08-14|Anguilla|Anguila 9PM|2026-08-14 21:00,2026-08-14,2026-08-14 21:00,Anguilla,Anguila 9PM,09-64-53,0.001409463109873131,8,False,0,0,0,6651.0
+2026-08-14|La Nacional|Loteria Nacional- Noche|2026-08-14 21:00,2026-08-14,2026-08-14 21:00,La Nacional,Loteria Nacional- Noche,89-87-14,0.004542752729310735,14,True,0,0,0,6651.0
