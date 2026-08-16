@@ -1430,3 +1430,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-08-16|La Nacional|Loteria Nacional- Gana Más|2026-08-16 14:30,2026-08-16,2026-08-16 14:30,La Nacional,Loteria Nacional- Gana Más,89-90-26,0.004412076841537228,1,False,0,1,0,1639.0
 2026-08-16|Anguilla|Anguila 6PM|2026-08-16 18:00,2026-08-16,2026-08-16 18:00,Anguilla,Anguila 6PM,31-28-86,0.0024643450607579995,7,False,0,1,0,2946.0
 2026-08-16|La Suerte|Quiniela La Suerte 6PM|2026-08-16 18:00,2026-08-16,2026-08-16 18:00,La Suerte,Quiniela La Suerte 6PM,10-98-24,0.002515869039935229,6,False,0,0,0,2946.0
+2026-08-16|La Primera|Quiniela La Primera Noche|2026-08-16 19:00,2026-08-16,2026-08-16 19:00,La Primera,Quiniela La Primera Noche,30-33-74,0.002651557413647171,15,True,0,0,0,6109.0
