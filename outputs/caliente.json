@@ -1,35 +1,37 @@
 {
-  "generado_en": "2026-08-23T18:20:10",
+  "generado_en": "2026-08-23T19:19:49",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Quiniela La Primera Noche": {
-      "draw": "Quiniela La Primera Noche",
-      "lottery": "La Primera",
+    "Anguila 9PM": {
+      "draw": "Anguila 9PM",
+      "lottery": "Anguilla",
       "date": "2026-08-23",
       "numeros": [
-        "18",
-        "65",
-        "15",
-        "99",
-        "68"
+        "20",
+        "06",
+        "34",
+        "55",
+        "63",
+        "76"
       ],
       "posiciones_usadas": [
-        5,
+        3,
+        8,
+        6,
         10,
-        12,
-        11,
-        3
+        9,
+        11
       ],
-      "n_numeros": 5,
-      "bonus_signal": false,
-      "signal": 0.002268,
-      "a11": 13,
+      "n_numeros": 6,
+      "bonus_signal": true,
+      "signal": 0.00417,
+      "a11": 11,
       "ok_alert": false,
-      "hit_rate_historico": 27.7,
-      "calidad_draw": "debil",
+      "hit_rate_historico": 31.2,
+      "calidad_draw": "normal",
       "advertencia": null
     }
   }
