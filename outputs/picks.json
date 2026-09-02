@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-09-02T10:39:13.981779-04:00",
-  "event_key": "2026-09-02|Anguilla|Anguila 10AM",
+  "generated_at": "2026-09-02T12:24:02.389129-04:00",
+  "event_key": "2026-09-02|La Primera|Quiniela La Primera",
   "target": {
-    "time_rd": "2026-09-02 12:00",
-    "lottery": "La Primera",
-    "draw": "Quiniela La Primera"
+    "time_rd": "2026-09-02 12:30",
+    "lottery": "La Suerte",
+    "draw": "Quiniela La Suerte"
   },
   "best_play": {
-    "time_rd": "2026-09-02 12:00",
-    "lottery": "La Primera",
-    "draw": "Quiniela La Primera",
+    "time_rd": "2026-09-02 12:30",
+    "lottery": "La Suerte",
+    "draw": "Quiniela La Suerte",
     "top12": [
+      "95",
       "46",
       "38",
-      "47",
-      "80",
-      "24",
-      "56",
+      "18",
+      "63",
+      "99",
+      "07",
+      "60",
       "65",
-      "64",
-      "14",
-      "10",
-      "85",
-      "26"
+      "33",
+      "56",
+      "59"
     ],
     "topq": [
+      "95",
       "46",
-      "38",
-      "47"
+      "38"
     ],
     "pales": [
-      "38-46",
-      "46-47",
-      "46-80"
+      "46-95",
+      "38-95",
+      "18-95"
     ],
-    "fingerprint": "bd614d37b8468895",
+    "fingerprint": "d5d7d161c676906d",
     "ok_alert": false,
-    "best_signal": 0.0022010533775685313,
-    "best_a11": 2,
+    "best_signal": 0.0045033636189497645,
+    "best_a11": 4,
     "debug": {
-      "best_signal_hist": 0.0022010533775685313,
-      "best_a11_hist": 2,
+      "best_signal_hist": 0.0045033636189497645,
+      "best_a11_hist": 4,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 3,
-      "source_pairs_today": 1,
-      "source_rows_hist_used": 84
+      "today_observed_nums": 6,
+      "source_pairs_today": 2,
+      "source_rows_hist_used": 391
     }
   }
 }
