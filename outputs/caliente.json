@@ -1,36 +1,36 @@
 {
-  "generado_en": "2026-09-04T19:22:55",
+  "generado_en": "2026-09-05T10:36:55",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Loteria Nacional- Noche": {
-      "draw": "Loteria Nacional- Noche",
-      "lottery": "La Nacional",
-      "date": "2026-09-04",
+    "Quiniela La Primera": {
+      "draw": "Quiniela La Primera",
+      "lottery": "La Primera",
+      "date": "2026-09-05",
       "numeros": [
-        "38",
-        "21",
-        "63",
-        "84",
-        "80",
-        "12"
+        "26",
+        "14",
+        "64",
+        "85",
+        "19",
+        "65"
       ],
       "posiciones_usadas": [
         8,
-        3,
         11,
-        10,
-        6,
-        1
+        7,
+        1,
+        9,
+        6
       ],
       "n_numeros": 6,
       "bonus_signal": true,
-      "signal": 0.00447,
-      "a11": 13,
+      "signal": 0.010846,
+      "a11": 1,
       "ok_alert": false,
-      "hit_rate_historico": 26.5,
+      "hit_rate_historico": 26.2,
       "calidad_draw": "debil",
       "advertencia": "draw con HR bajo (<28%)"
     }
