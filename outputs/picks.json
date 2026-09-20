@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-09-19T19:21:36.993251-04:00",
-  "event_key": "2026-09-19|La Primera|Quiniela La Primera Noche",
+  "generated_at": "2026-09-20T10:35:14.269461-04:00",
+  "event_key": "2026-09-20|TEST|NO-UPDATE",
   "target": {
-    "time_rd": "2026-09-19 21:00",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Noche"
+    "time_rd": "2026-09-20 12:00",
+    "lottery": "La Primera",
+    "draw": "Quiniela La Primera"
   },
   "best_play": {
-    "time_rd": "2026-09-19 21:00",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Noche",
+    "time_rd": "2026-09-20 12:00",
+    "lottery": "La Primera",
+    "draw": "Quiniela La Primera",
     "top12": [
-      "72",
-      "13",
-      "03",
-      "47",
-      "07",
-      "38",
+      "64",
+      "10",
+      "23",
+      "76",
+      "14",
+      "83",
+      "56",
+      "96",
       "80",
-      "90",
-      "61",
-      "11",
-      "84",
-      "63"
+      "24",
+      "65",
+      "16"
     ],
     "topq": [
-      "72",
-      "13",
-      "03"
+      "64",
+      "10",
+      "23"
     ],
     "pales": [
-      "13-72",
-      "03-72",
-      "47-72"
+      "10-64",
+      "23-64",
+      "64-76"
     ],
-    "fingerprint": "beed73712cb26b46",
-    "ok_alert": true,
-    "best_signal": 0.0014515574258061191,
-    "best_a11": 15,
+    "fingerprint": "ccfc8bfad0e63972",
+    "ok_alert": false,
+    "best_signal": 0.0028490580904758957,
+    "best_a11": 4,
     "debug": {
-      "best_signal_hist": 0.0014515574258061191,
-      "best_a11_hist": 15,
+      "best_signal_hist": 0.0028490580904758957,
+      "best_a11_hist": 4,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 20,
-      "source_pairs_today": 8,
-      "source_rows_hist_used": 6242
+      "today_observed_nums": 0,
+      "source_pairs_today": 1,
+      "source_rows_hist_used": 2940
     }
   }
 }
