@@ -1719,3 +1719,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-09-22|La Primera|Quiniela La Primera|2026-09-22 12:00,2026-09-22,2026-09-22 12:00,La Primera,Quiniela La Primera,90-82-96,0.0022985158818796926,0,False,0,0,0,91.0
 2026-09-22|Anguilla|Anguila 6PM|2026-09-22 18:00,2026-09-22,2026-09-22 18:00,Anguilla,Anguila 6PM,22-58-36,0.005208791521612457,8,False,0,0,0,2814.0
 2026-09-22|La Suerte|Quiniela La Suerte 6PM|2026-09-22 18:00,2026-09-22,2026-09-22 18:00,La Suerte,Quiniela La Suerte 6PM,81-46-43,0.0015904081773798731,11,False,0,0,0,2814.0
+2026-09-22|La Primera|Quiniela La Primera Noche|2026-09-22 19:00,2026-09-22,2026-09-22 19:00,La Primera,Quiniela La Primera Noche,67-02-30,0.0019179835701682952,13,True,0,0,0,5504.0
