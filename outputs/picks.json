@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-09-24T13:00:15.047933-04:00",
-  "event_key": "2026-09-24|La Suerte|Quiniela La Suerte",
+  "generated_at": "2026-09-24T13:50:12.124555-04:00",
+  "event_key": "2026-09-24|Anguilla|Anguila 1PM",
   "target": {
-    "time_rd": "2026-09-24 13:00",
-    "lottery": "Anguilla",
-    "draw": "Anguila 1PM"
+    "time_rd": "2026-09-24 14:30",
+    "lottery": "La Nacional",
+    "draw": "Loteria Nacional- Gana Más"
   },
   "best_play": {
-    "time_rd": "2026-09-24 13:00",
-    "lottery": "Anguilla",
-    "draw": "Anguila 1PM",
+    "time_rd": "2026-09-24 14:30",
+    "lottery": "La Nacional",
+    "draw": "Loteria Nacional- Gana Más",
     "top12": [
-      "39",
-      "66",
-      "02",
+      "86",
       "41",
-      "81",
-      "57",
-      "33",
-      "60",
+      "13",
+      "40",
+      "20",
+      "89",
+      "64",
+      "95",
       "94",
-      "77",
       "82",
-      "65"
+      "42",
+      "37"
     ],
     "topq": [
-      "39",
-      "66",
-      "02"
+      "86",
+      "41",
+      "13"
     ],
     "pales": [
-      "39-66",
-      "02-39",
-      "39-41"
+      "41-86",
+      "13-86",
+      "40-86"
     ],
-    "fingerprint": "7110b457049ea44c",
+    "fingerprint": "07e9dc1ede51de0e",
     "ok_alert": false,
-    "best_signal": 0.003698123555238165,
+    "best_signal": 0.001994603709943479,
     "best_a11": 6,
     "debug": {
-      "best_signal_hist": 0.003698123555238165,
+      "best_signal_hist": 0.001994603709943479,
       "best_a11_hist": 6,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 8,
-      "source_pairs_today": 3,
-      "source_rows_hist_used": 901
+      "today_observed_nums": 11,
+      "source_pairs_today": 4,
+      "source_rows_hist_used": 1597
     }
   }
 }
