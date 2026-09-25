@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-09-24T19:20:30.791901-04:00",
-  "event_key": "2026-09-24|La Primera|Quiniela La Primera Noche",
+  "generated_at": "2026-09-25T10:34:10.544343-04:00",
+  "event_key": "2026-09-25|Anguilla|Anguila 10AM",
   "target": {
-    "time_rd": "2026-09-24 21:00",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Noche"
+    "time_rd": "2026-09-25 12:00",
+    "lottery": "La Primera",
+    "draw": "Quiniela La Primera"
   },
   "best_play": {
-    "time_rd": "2026-09-24 21:00",
-    "lottery": "La Nacional",
-    "draw": "Loteria Nacional- Noche",
+    "time_rd": "2026-09-25 12:00",
+    "lottery": "La Primera",
+    "draw": "Quiniela La Primera",
     "top12": [
-      "12",
-      "72",
-      "68",
-      "13",
-      "63",
+      "53",
+      "24",
       "80",
-      "90",
-      "61",
-      "07",
-      "84",
-      "11",
-      "38"
+      "56",
+      "83",
+      "65",
+      "64",
+      "96",
+      "85",
+      "19",
+      "10",
+      "91"
     ],
     "topq": [
-      "12",
-      "72",
-      "68"
+      "53",
+      "24",
+      "80"
     ],
     "pales": [
-      "12-72",
-      "12-68",
-      "12-13"
+      "24-53",
+      "53-80",
+      "53-56"
     ],
-    "fingerprint": "bad06abbb466c43b",
+    "fingerprint": "c04fd1b6449ddd13",
     "ok_alert": false,
-    "best_signal": 0.0042904027277921985,
-    "best_a11": 15,
+    "best_signal": 0.0010456369429324502,
+    "best_a11": 1,
     "debug": {
-      "best_signal_hist": 0.0042904027277921985,
-      "best_a11_hist": 15,
+      "best_signal_hist": 0.0010456369429324502,
+      "best_a11_hist": 1,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 20,
-      "source_pairs_today": 8,
-      "source_rows_hist_used": 6251
+      "today_observed_nums": 3,
+      "source_pairs_today": 1,
+      "source_rows_hist_used": 90
     }
   }
 }
