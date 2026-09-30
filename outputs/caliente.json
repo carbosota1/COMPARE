@@ -1,8 +1,8 @@
 {
-  "generado_en": "2026-09-30T19:41:12",
+  "generado_en": "2026-09-30T19:47:20",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
-  "total_loterias": 1,
+  "total_loterias": 2,
   "skipped": [],
   "loterias": {
     "Anguila 9PM": {
@@ -31,6 +31,35 @@
       "hit_rate_historico": 31.2,
       "calidad_draw": "normal",
       "advertencia": null
+    },
+    "Loteria Nacional- Noche": {
+      "draw": "Loteria Nacional- Noche",
+      "lottery": "La Nacional",
+      "date": "2026-09-30",
+      "numeros": [
+        "90",
+        "95",
+        "13",
+        "07",
+        "38",
+        "12"
+      ],
+      "posiciones_usadas": [
+        8,
+        3,
+        11,
+        10,
+        6,
+        1
+      ],
+      "n_numeros": 6,
+      "bonus_signal": true,
+      "signal": 0.004934,
+      "a11": 11,
+      "ok_alert": false,
+      "hit_rate_historico": 26.5,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
     }
   }
 }
