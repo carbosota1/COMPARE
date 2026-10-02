@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-02T18:14:27.789200-04:00",
-  "event_key": "2026-10-02|La Suerte|Quiniela La Suerte 6PM",
+  "generated_at": "2026-10-02T18:24:51.954294-04:00",
+  "event_key": "2026-10-02|TEST|NO-UPDATE",
   "items": [
     {
-      "generated_at": "2026-10-02T18:14:27.003415-04:00",
-      "event_key": "2026-10-02|La Suerte|Quiniela La Suerte 6PM",
+      "generated_at": "2026-10-02T18:24:51.026030-04:00",
+      "event_key": "2026-10-02|TEST|NO-UPDATE",
       "target": {
         "time_rd": "2026-10-02 19:00",
         "lottery": "La Primera",
