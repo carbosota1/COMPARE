@@ -1839,3 +1839,4 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-10-07|La Nacional|Loteria Nacional- Noche|2026-10-07 21:00,2026-10-07,2026-10-07 21:00,La Nacional,Loteria Nacional- Noche,14-59-00,0.002094499637197912,12,True,0,0,0,6188.0
 2026-10-08|La Primera|Quiniela La Primera|2026-10-08 12:00,2026-10-08,2026-10-08 12:00,La Primera,Quiniela La Primera,31-61-60,0.012288778153409645,1,False,0,0,0,91.0
 2026-10-08|La Suerte|Quiniela La Suerte|2026-10-08 12:30,2026-10-08,2026-10-08 12:30,La Suerte,Quiniela La Suerte,06-40-70,0.0017721097191322004,5,False,0,0,0,419.0
+2026-10-08|Anguilla|Anguila 1PM|2026-10-08 13:00,2026-10-08,2026-10-08 13:00,Anguilla,Anguila 1PM,06-81-19,0.0013328325890449954,4,False,0,1,0,1022.0
