@@ -1,36 +1,38 @@
 {
-  "generado_en": "2026-10-09T19:21:22",
+  "generado_en": "2026-10-10T10:35:01",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
   "total_loterias": 1,
   "skipped": [],
   "loterias": {
-    "Anguila 9PM": {
-      "draw": "Anguila 9PM",
-      "lottery": "Anguilla",
-      "date": "2026-10-09",
+    "Quiniela La Primera": {
+      "draw": "Quiniela La Primera",
+      "lottery": "La Primera",
+      "date": "2026-10-10",
       "numeros": [
-        "78",
-        "63",
-        "69",
-        "05",
-        "06"
+        "19",
+        "26",
+        "83",
+        "73",
+        "64",
+        "56"
       ],
       "posiciones_usadas": [
-        3,
         8,
-        6,
-        10,
-        9
+        11,
+        7,
+        1,
+        9,
+        6
       ],
-      "n_numeros": 5,
-      "bonus_signal": false,
-      "signal": 0.001664,
-      "a11": 11,
-      "ok_alert": false,
-      "hit_rate_historico": 31.2,
-      "calidad_draw": "normal",
-      "advertencia": null
+      "n_numeros": 6,
+      "bonus_signal": true,
+      "signal": 0.022325,
+      "a11": 2,
+      "ok_alert": true,
+      "hit_rate_historico": 26.2,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
     }
   }
 }
