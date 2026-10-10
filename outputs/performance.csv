@@ -1859,3 +1859,5 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-10-10|La Suerte|Quiniela La Suerte|2026-10-10 12:30,2026-10-10,2026-10-10 12:30,La Suerte,Quiniela La Suerte,12-34-72,0.005811206747727379,4,False,0,0,0,431.0
 2026-10-10|Anguilla|Anguila 1PM|2026-10-10 13:00,2026-10-10,2026-10-10 13:00,Anguilla,Anguila 1PM,14-13-33,0.0010053637306938414,4,False,0,1,0,1016.0
 2026-10-10|La Nacional|Loteria Nacional- Gana Más|2026-10-10 14:30,2026-10-10,2026-10-10 14:30,La Nacional,Loteria Nacional- Gana Más,10-35-35,0.0011100146722000431,9,False,0,0,0,1739.0
+2026-10-10|Anguilla|Anguila 6PM|2026-10-10 18:00,2026-10-10,2026-10-10 18:00,Anguilla,Anguila 6PM,61-07-01,0.00487607587710536,12,False,0,0,0,2949.0
+2026-10-10|La Suerte|Quiniela La Suerte 6PM|2026-10-10 18:00,2026-10-10,2026-10-10 18:00,La Suerte,Quiniela La Suerte 6PM,57-46-15,0.002641180733797451,9,False,0,0,0,2949.0
