@@ -1,55 +1,106 @@
 {
-  "generated_at": "2026-10-12T13:20:02.818232-04:00",
-  "event_key": "2026-10-12|Anguilla|Anguila 1PM",
+  "generated_at": "2026-10-12T16:15:38.883229-04:00",
+  "event_key": "2026-10-12|La Nacional|Loteria Nacional- Gana Más",
   "items": [
     {
-      "generated_at": "2026-10-12T13:20:02.040626-04:00",
-      "event_key": "2026-10-12|Anguilla|Anguila 1PM",
+      "generated_at": "2026-10-12T16:15:18.340668-04:00",
+      "event_key": "2026-10-12|La Nacional|Loteria Nacional- Gana Más",
       "target": {
-        "time_rd": "2026-10-12 14:30",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Gana Más"
+        "time_rd": "2026-10-12 18:00",
+        "lottery": "Anguilla",
+        "draw": "Anguila 6PM"
       },
       "best_play": {
-        "time_rd": "2026-10-12 14:30",
-        "lottery": "La Nacional",
-        "draw": "Loteria Nacional- Gana Más",
+        "time_rd": "2026-10-12 18:00",
+        "lottery": "Anguilla",
+        "draw": "Anguila 6PM",
+        "top12": [
+          "02",
+          "63",
+          "45",
+          "03",
+          "66",
+          "70",
+          "26",
+          "54",
+          "59",
+          "07",
+          "71",
+          "36"
+        ],
+        "topq": [
+          "02",
+          "63",
+          "45"
+        ],
+        "pales": [
+          "02-63",
+          "02-45",
+          "02-03"
+        ],
+        "fingerprint": "4f6f9efbfc70d6b3",
+        "ok_alert": false,
+        "best_signal": 0.00215305679602795,
+        "best_a11": 8,
+        "debug": {
+          "best_signal_hist": 0.00215305679602795,
+          "best_a11_hist": 8,
+          "has_intraday_sources": 0,
+          "intraday_events": 0,
+          "today_observed_nums": 14,
+          "source_pairs_today": 5,
+          "source_rows_hist_used": 2830
+        }
+      }
+    },
+    {
+      "generated_at": "2026-10-12T16:15:38.139536-04:00",
+      "event_key": "2026-10-12|La Nacional|Loteria Nacional- Gana Más",
+      "target": {
+        "time_rd": "2026-10-12 18:00",
+        "lottery": "La Suerte",
+        "draw": "Quiniela La Suerte 6PM"
+      },
+      "best_play": {
+        "time_rd": "2026-10-12 18:00",
+        "lottery": "La Suerte",
+        "draw": "Quiniela La Suerte 6PM",
         "top12": [
           "19",
-          "40",
-          "20",
-          "89",
-          "13",
-          "41",
-          "64",
-          "95",
-          "82",
-          "42",
-          "94",
-          "22"
+          "45",
+          "79",
+          "87",
+          "53",
+          "92",
+          "73",
+          "35",
+          "66",
+          "51",
+          "21",
+          "00"
         ],
         "topq": [
           "19",
-          "40",
-          "20"
+          "45",
+          "79"
         ],
         "pales": [
-          "19-40",
-          "19-20",
-          "19-89"
+          "19-45",
+          "19-79",
+          "19-87"
         ],
-        "fingerprint": "4fdc4c5985a6c56a",
+        "fingerprint": "f132bb02953a724a",
         "ok_alert": false,
-        "best_signal": 0.0009062404400504546,
-        "best_a11": 6,
+        "best_signal": 0.002077943993033482,
+        "best_a11": 8,
         "debug": {
-          "best_signal_hist": 0.0009062404400504546,
-          "best_a11_hist": 6,
+          "best_signal_hist": 0.002077943993033482,
+          "best_a11_hist": 8,
           "has_intraday_sources": 0,
           "intraday_events": 0,
-          "today_observed_nums": 11,
-          "source_pairs_today": 4,
-          "source_rows_hist_used": 1571
+          "today_observed_nums": 14,
+          "source_pairs_today": 5,
+          "source_rows_hist_used": 2830
         }
       }
     }
