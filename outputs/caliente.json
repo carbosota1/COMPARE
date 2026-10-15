@@ -1,38 +1,65 @@
 {
-  "generado_en": "2026-10-15T13:19:44",
+  "generado_en": "2026-10-15T19:57:19",
   "calibrado_con": "Mar 1 - Jun 2, 2026 (703 sorteos)",
   "signal_median": 0.003,
-  "total_loterias": 1,
+  "total_loterias": 2,
   "skipped": [],
   "loterias": {
-    "Loteria Nacional- Gana Más": {
-      "draw": "Loteria Nacional- Gana Más",
+    "Anguila 9PM": {
+      "draw": "Anguila 9PM",
+      "lottery": "Anguilla",
+      "date": "2026-10-15",
+      "numeros": [
+        "55",
+        "03",
+        "06",
+        "05",
+        "25"
+      ],
+      "posiciones_usadas": [
+        3,
+        8,
+        6,
+        10,
+        9
+      ],
+      "n_numeros": 5,
+      "bonus_signal": false,
+      "signal": 0.001931,
+      "a11": 6,
+      "ok_alert": false,
+      "hit_rate_historico": 31.2,
+      "calidad_draw": "normal",
+      "advertencia": null
+    },
+    "Loteria Nacional- Noche": {
+      "draw": "Loteria Nacional- Noche",
       "lottery": "La Nacional",
       "date": "2026-10-15",
       "numeros": [
-        "42",
-        "20",
-        "40",
-        "30",
-        "95",
-        "94"
+        "38",
+        "71",
+        "11",
+        "84",
+        "80",
+        "12"
       ],
       "posiciones_usadas": [
-        4,
-        6,
-        5,
-        1,
+        8,
+        3,
         11,
-        12
+        10,
+        6,
+        1
       ],
       "n_numeros": 6,
       "bonus_signal": true,
-      "signal": 0.00319,
-      "a11": 6,
-      "ok_alert": false,
-      "hit_rate_historico": 31.4,
-      "calidad_draw": "normal",
-      "advertencia": null
+      "signal": 0.00452,
+      "a11": 15,
+      "ok_alert": true,
+      "hit_rate_historico": 26.5,
+      "calidad_draw": "debil",
+      "advertencia": "draw con HR bajo (<28%)"
     }
   }
 }
