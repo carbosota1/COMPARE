@@ -15,7 +15,6 @@ sys.path.insert(0, os.path.dirname(__file__))
 from io_xlsx import ensure_dir, read_history_xlsx, upsert_history_xlsx, normalize_2d
 from analyze import explode, recommend_for_target, should_alert, top_pales
 from telegram import send_telegram
-from oldmix_caliente import run as run_caliente
 
 TZ = ZoneInfo("America/Santo_Domingo")
 
@@ -964,50 +963,6 @@ def main():
             json.dump(picks_all[-1], f, ensure_ascii=False, indent=2)
 
         print("[OK] Wrote outputs/picks_all.json and outputs/picks.json")
-
-        # ── OLDMIX CALIENTE ──────────────────────────────────────────────────
-        try:
-            caliente_picks = []
-            for p in picks_all:
-                bp = p.get("best_play", {})
-                caliente_picks.append({
-                    "draw":        bp.get("draw", ""),
-                    "lottery":     bp.get("lottery", ""),
-                    "date":        (bp.get("time_rd") or "")[:10],
-                    "top12":       bp.get("top12", []),
-                    "best_signal": bp.get("best_signal", 0),
-                    "best_a11":    bp.get("best_a11", 0),
-                    "ok_alert":    bp.get("ok_alert", False),
-                })
-
-            caliente_path = os.path.join(OUT_DIR, "caliente.json")
-            caliente_result = run_caliente(picks=caliente_picks, output_path=caliente_path)
-            print("[OK] Wrote outputs/caliente.json")
-
-            # Telegram con los números calientes
-            loterias = caliente_result.get("loterias", {})
-            if loterias:
-                msg = []
-                msg.append("🔥 OLDMIX CALIENTE")
-                msg.append(f"📅 {today_str()}")
-                msg.append("")
-                for draw, r in loterias.items():
-                    nums  = ", ".join(r.get("numeros", []))
-                    hr    = r.get("hit_rate_historico", 0)
-                    warn  = "  ⚠️" if r.get("advertencia") else ""
-                    bonus = " ⚡" if r.get("bonus_signal") else ""
-                    msg.append(f"🎯 {draw}{warn}")
-                    msg.append(f"   🔢 {nums}{bonus}")
-                    msg.append(f"   📊 HR hist: {hr}%")
-                    msg.append("")
-                msg.append(f"Calibrado: Mar–Jun 2026 · {len(loterias)} draws")
-                send_telegram("\n".join(msg))
-                print("[OK] Telegram caliente sent.")
-
-        except Exception as e:
-            print(f"[WARN] oldmix_caliente failed: {e}")
-        # ── FIN OLDMIX CALIENTE ──────────────────────────────────────────────
-
     else:
         print("[INFO] No payloads produced.")
 
