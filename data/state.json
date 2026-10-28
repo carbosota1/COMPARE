@@ -2496,9 +2496,10 @@
     "2026-10-27|Anguilla|Anguila 9PM": "done",
     "2026-10-27|La Nacional|Loteria Nacional- Noche": "done",
     "2026-10-28|La Suerte|Quiniela La Suerte": "done",
-    "2026-10-28|Anguilla|Anguila 1PM": "done"
+    "2026-10-28|Anguilla|Anguila 1PM": "done",
+    "2026-10-28|La Nacional|Loteria Nacional- Gana Más": "done"
   },
-  "last_event_key": "2026-10-28|Anguilla|Anguila 1PM",
+  "last_event_key": "2026-10-28|La Nacional|Loteria Nacional- Gana Más",
   "sent_by_target_fp": {
     "2026-02-19 12:00|La Primera|Quiniela La Primera": "b9eda51058778462",
     "2026-02-19 12:30|La Suerte|Quiniela La Suerte": "dbcbd970c5163e2d",
@@ -4472,7 +4473,9 @@
     "2026-10-27 21:00|La Nacional|Loteria Nacional- Noche": "a534c579d157614b",
     "2026-10-28 12:30|La Suerte|Quiniela La Suerte": "9ec7525232244600",
     "2026-10-28 13:00|Anguilla|Anguila 1PM": "bcddd39d154fc22c",
-    "2026-10-28 14:30|La Nacional|Loteria Nacional- Gana Más": "639ea8ec93eee11c"
+    "2026-10-28 14:30|La Nacional|Loteria Nacional- Gana Más": "639ea8ec93eee11c",
+    "2026-10-28 18:00|Anguilla|Anguila 6PM": "134a4d7525192650",
+    "2026-10-28 18:00|La Suerte|Quiniela La Suerte 6PM": "f5d6a854b3ced7bb"
   },
   "last_wait_key": ""
 }
