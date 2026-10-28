@@ -1977,3 +1977,5 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-10-27|La Primera|Quiniela La Primera|2026-10-27 12:00,2026-10-27,2026-10-27 12:00,La Primera,Quiniela La Primera,18-84-49,0.006459768514452708,1,False,0,0,0,96.0
 2026-10-27|Anguilla|Anguila 1PM|2026-10-27 13:00,2026-10-27,2026-10-27 13:00,Anguilla,Anguila 1PM,54-65-92,0.004495295812643434,7,False,0,1,0,1034.0
 2026-10-27|La Nacional|Loteria Nacional- Gana Más|2026-10-27 14:30,2026-10-27,2026-10-27 14:30,La Nacional,Loteria Nacional- Gana Más,02-12-66,0.0033568464866182706,6,False,0,0,0,1788.0
+2026-10-27|Anguilla|Anguila 9PM|2026-10-27 21:00,2026-10-27,2026-10-27 21:00,Anguilla,Anguila 9PM,93-83-87,0.0020601417516326213,12,False,1,1,0,7414.0
+2026-10-27|La Nacional|Loteria Nacional- Noche|2026-10-27 21:00,2026-10-27,2026-10-27 21:00,La Nacional,Loteria Nacional- Noche,28-70-01,0.004478305702834328,13,False,0,0,0,7414.0
