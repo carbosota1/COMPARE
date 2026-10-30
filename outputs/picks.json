@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-10-29T18:22:19.302412-04:00",
-  "event_key": "2026-10-29|La Suerte|Quiniela La Suerte 6PM",
+  "generated_at": "2026-10-30T10:42:51.020415-04:00",
+  "event_key": "2026-10-30|TEST|NO-UPDATE",
   "target": {
-    "time_rd": "2026-10-29 19:00",
+    "time_rd": "2026-10-30 12:00",
     "lottery": "La Primera",
-    "draw": "Quiniela La Primera Noche"
+    "draw": "Quiniela La Primera"
   },
   "best_play": {
-    "time_rd": "2026-10-29 19:00",
+    "time_rd": "2026-10-30 12:00",
     "lottery": "La Primera",
-    "draw": "Quiniela La Primera Noche",
+    "draw": "Quiniela La Primera",
     "top12": [
-      "42",
-      "41",
-      "31",
+      "64",
+      "10",
+      "23",
       "14",
-      "18",
-      "79",
-      "05",
+      "83",
+      "80",
+      "56",
+      "96",
       "65",
-      "47",
-      "99",
-      "55",
-      "09"
+      "24",
+      "16",
+      "85"
     ],
     "topq": [
-      "42",
-      "41",
-      "31"
+      "64",
+      "10",
+      "23"
     ],
     "pales": [
-      "41-42",
-      "31-42",
-      "14-42"
+      "10-64",
+      "23-64",
+      "14-64"
     ],
-    "fingerprint": "4aae7909e5235ad5",
+    "fingerprint": "4a18b7daebb573b1",
     "ok_alert": false,
-    "best_signal": 0.0005301123921489401,
-    "best_a11": 9,
+    "best_signal": 0.0025720620823130474,
+    "best_a11": 4,
     "debug": {
-      "best_signal_hist": 0.0005301123921489401,
-      "best_a11_hist": 9,
+      "best_signal_hist": 0.0025720620823130474,
+      "best_a11_hist": 4,
       "has_intraday_sources": 0,
       "intraday_events": 0,
-      "today_observed_nums": 18,
-      "source_pairs_today": 7,
-      "source_rows_hist_used": 5044
+      "today_observed_nums": 0,
+      "source_pairs_today": 1,
+      "source_rows_hist_used": 3060
     }
   }
 }
