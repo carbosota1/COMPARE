@@ -2139,3 +2139,6 @@ key,date,time_rd,lottery,draw,result,best_signal,best_a11,ok_alert,hits_quiniela
 2026-11-17|La Suerte|Quiniela La Suerte|2026-11-17 12:30,2026-11-17,2026-11-17 12:30,La Suerte,Quiniela La Suerte,52-63-24,0.004579000188102653,6,False,0,1,0,430.0
 2026-11-17|Anguilla|Anguila 1PM|2026-11-17 13:00,2026-11-17,2026-11-17 13:00,Anguilla,Anguila 1PM,28-81-61,0.0038109798768090667,5,False,0,1,0,1031.0
 2026-11-17|La Nacional|Loteria Nacional- Gana Más|2026-11-17 14:30,2026-11-17,2026-11-17 14:30,La Nacional,Loteria Nacional- Gana Más,25-69-11,0.0009963449475661086,6,False,0,0,0,1763.0
+2026-11-17|Anguilla|Anguila 6PM|2026-11-17 18:00,2026-11-17,2026-11-17 18:00,Anguilla,Anguila 6PM,55-38-44,0.0016501188227813256,8,False,0,0,0,3092.0
+2026-11-17|La Suerte|Quiniela La Suerte 6PM|2026-11-17 18:00,2026-11-17,2026-11-17 18:00,La Suerte,Quiniela La Suerte 6PM,65-38-16,0.0011465851371165198,10,False,0,0,0,3092.0
+2026-11-17|La Primera|Quiniela La Primera Noche|2026-11-17 19:00,2026-11-17,2026-11-17 19:00,La Primera,Quiniela La Primera Noche,20-21-72,0.0017070867813416585,12,True,0,0,0,4159.0
